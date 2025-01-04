@@ -1,29 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mustafa Taha - Full Stack Developer</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Optional, for custom styles -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mustafa Taha - Full Stack Developer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-top: 10px;
+      color: #777;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .badge-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .badge-container img {
+      margin: 5px;
+    }
+
+    .projects,
+    .stats,
+    .contact {
+      margin-top: 40px;
+    }
+
+    .project-item {
+      display: inline-block;
+      width: 48%;
+      margin: 1%;
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .project-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .github-stats {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    .github-stats div {
+      flex: 1;
+      text-align: center;
+    }
+
+    .contact a {
+      text-decoration: none;
+      color: #333;
+      background-color: #0073b1;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .contact a:hover {
+      background-color: #005f88;
+    }
+
+    .images-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .images-container img {
+      width: 48%;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Hi, I'm Mustafa Taha 👋</h1>
-        <p>I'm a passionate full-stack developer with a strong background in **Java**, **JavaScript (ES6)**, and **Python**. </p>
-    </header>
+  <header>
+    <h1>Hi there, I'm Mustafa Taha 👋</h1>
+    <h2>I'm a passionate full-stack developer with a strong background in <strong>Java</strong>, <strong>JavaScript (ES6)</strong>, and <strong>Python</strong>.</h2>
+    <p>My journey in web development has been driven by a love for problem-solving and innovation, particularly using frameworks like <strong>Django</strong>, <strong>Spring Boot</strong>, <strong>Flutter</strong>, and <strong>React</strong>.</p>
+    <p align="center">
+      <img src="https://user-images.githubusercontent.com/74038190/212749168-86d6c7ab-98da-409b-998f-c5b74721badd.gif" alt="Profile Image" width="400" />
+    </p>
+  </header>
 
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <ul>
-            <li><a href="https://github.com/mustafataha5/New_Book_store">ReadEase</a> - Online Book Store</li>
-            <li><a href="https://github.com/mustafataha5/palrent">PalRent</a> - Apartment Reservation System</li>
-            <li><a href="https://github.com/mustafataha5/LinkUp">LinkUp</a> - Social Media Platform</li>
-        </ul>
-    </section>
+  <div class="content">
+    <h2>🚀 Technical Skills</h2>
+    <div class="badge-container">
+      <a href="https://www.java.com/"><img src="https://img.shields.io/badge/Java-v17-orange?logo=java" alt="Java Badge" /></a>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript" alt="JavaScript Badge" /></a>
+      <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-v3.9.6-blue?logo=python" alt="Python Badge" /></a>
+      <a href="https://flutter.dev/"><img src="https://img.shields.io/badge/Flutter-v3.10.0-blue?logo=flutter" alt="Flutter Badge" /></a>
+    </div>
+    <div class="badge-container">
+      <a href="https://validator.w3.org/"><img src="https://img.shields.io/badge/HTML5-v5-red?logo=html5" alt="HTML5 Badge" /></a>
+      <a href="https://www.w3.org/Style/CSS/"><img src="https://img.shields.io/badge/CSS3-v3-blue?logo=css3" alt="CSS3 Badge" /></a>
+      <a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/SQL-valid-lightgrey?logo=postgresql" alt="SQL Badge" /></a>
+      <a href="https://www.gnu.org/software/bash/"><img src="https://img.shields.io/badge/Shell_Bash-v5.1-black?logo=gnu-bash" alt="Shell/Bash Badge" /></a>
+    </div>
 
-    <footer>
-        <p>Connect with me on <a href="https://www.linkedin.com/in/mustafa-taha-3b87771b4/">LinkedIn</a></p>
-    </footer>
+    <h2>💻 Featured Projects</h2>
+    <div class="projects">
+      <div class="project-item">
+        <h3><a href="https://github.com/mustafataha5/New_Book_store">ReadEase</a></h3>
+        <p>Online Book Store built using Django and Jinja2 with AJAX-based smooth UI, book reviews, and more.</p>
+      </div>
+      <div class="project-item">
+        <h3><a href="https://github.com/mustafataha5/palrent">PalRent</a></h3>
+        <p>Apartment reservation system using Spring Boot with secure authentication and admin dashboard.</p>
+      </div>
+      <div class="project-item">
+        <h3><a href="https://github.com/mustafataha5/LinkUp">LinkUp</a></h3>
+        <p>Social Media Platform using MERN stack with post creation, user authentication, and real-time updates.</p>
+      </div>
+      <div class="project-item">
+        <h3><a href="https://github.com/mustafataha5/e-commerce/">E-Commerce</a></h3>
+        <p>Shopping mall web application built with React, Node.js, MongoDB, and Flutter with real-time features.</p>
+      </div>
+    </div>
+
+    <h2>📈 GitHub Stats</h2>
+    <div class="github-stats">
+      <div>
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mustafataha5&layout=compact&theme=radical" alt="Top Languages">
+      </div>
+      <div>
+        <img src="https://github-readme-stats.vercel.app/api?username=mustafataha5&show_icons=true&theme=radical" alt="GitHub Stats">
+      </div>
+    </div>
+
+    <h2>🤝 Contact Me</h2>
+    <div class="contact">
+      <a href="https://www.linkedin.com/in/mustafa-taha-3b87771b4/">LinkedIn</a>
+      <a href="https://github.com/mustafataha5">GitHub</a>
+      <a href="https://leetcode.com/mustafataha5/">LeetCode</a>
+    </div>
+
+    <h2>Some Pics</h2>
+    <div class="images-container">
+      <img src="https://github.com/mustafataha5/e-commerce/blob/master/images/entry.png" alt="E-Commerce Entry">
+      <img src="https://github.com/mustafataha5/e-commerce/blob/master/images/main.png" alt="E-Commerce Main">
+      <img src="https://github.com/mustafataha5/palrent/blob/master/1.png" alt="PalRent">
+      <img src="https://github.com/mustafataha5/LinkUp/blob/master/User.png" alt="LinkUp User">
+    </div>
+  </div>
 </body>
+
 </html>
 
