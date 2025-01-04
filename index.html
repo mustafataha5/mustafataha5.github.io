@@ -7,93 +7,121 @@
   <title>Mustafa Taha - Full Stack Developer</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
       margin: 0;
       padding: 0;
+      color: #333;
     }
 
     header {
-      background-color: #333;
+      background-color: #2c3e50;
       color: white;
-      padding: 20px;
+      padding: 30px;
       text-align: center;
     }
 
-    h1,
-    h2,
-    h3 {
+    header h1 {
+      font-size: 3em;
       margin: 0;
+      font-weight: 700;
     }
 
-    h1 {
-      font-size: 36px;
-    }
-
-    h2 {
-      font-size: 24px;
+    header h2 {
+      font-size: 1.5em;
       margin-top: 10px;
+      font-weight: 300;
     }
 
-    h3 {
-      font-size: 18px;
+    header p {
+      font-size: 1.2em;
       margin-top: 10px;
-      color: #777;
+      font-weight: 300;
+    }
+
+    header img {
+      border-radius: 50%;
+      margin-top: 20px;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border: 5px solid white;
     }
 
     .content {
-      padding: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #2c3e50;
     }
 
     .badge-container {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
     .badge-container img {
-      margin: 5px;
+      margin: 10px;
     }
 
-    .projects,
-    .stats,
-    .contact {
-      margin-top: 40px;
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
 
     .project-item {
-      display: inline-block;
       width: 48%;
-      margin: 1%;
       background-color: white;
-      padding: 15px;
+      padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .project-item:hover {
       transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
-    .project-item img {
-      width: 100%;
-      border-radius: 8px;
+    .project-item h3 {
+      font-size: 1.4em;
+      margin: 0;
+      color: #2c3e50;
+    }
+
+    .project-item p {
+      font-size: 1em;
+      margin-top: 10px;
+      color: #7f8c8d;
     }
 
     .github-stats {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       margin-top: 40px;
     }
 
     .github-stats div {
-      flex: 1;
+      width: 45%;
       text-align: center;
     }
 
+    .github-stats img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
     .contact a {
+      display: inline-block;
       text-decoration: none;
-      color: #333;
+      color: white;
       background-color: #0073b1;
       padding: 10px 15px;
       border-radius: 5px;
@@ -109,11 +137,22 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      margin-top: 40px;
     }
 
     .images-container img {
       width: 48%;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #2c3e50;
+      color: white;
+      font-size: 1em;
     }
   </style>
 </head>
@@ -121,11 +160,9 @@
 <body>
   <header>
     <h1>Hi there, I'm Mustafa Taha 👋</h1>
-    <h2>I'm a passionate full-stack developer with a strong background in <strong>Java</strong>, <strong>JavaScript (ES6)</strong>, and <strong>Python</strong>.</h2>
-    <p>My journey in web development has been driven by a love for problem-solving and innovation, particularly using frameworks like <strong>Django</strong>, <strong>Spring Boot</strong>, <strong>Flutter</strong>, and <strong>React</strong>.</p>
-    <p align="center">
-      <img src="https://user-images.githubusercontent.com/74038190/212749168-86d6c7ab-98da-409b-998f-c5b74721badd.gif" alt="Profile Image" width="400" />
-    </p>
+    <h2>Passionate Full Stack Developer | Java | JavaScript | Python</h2>
+    <p>Creating innovative and user-friendly solutions with <strong>Django</strong>, <strong>Spring Boot</strong>, <strong>React</strong>, and <strong>Flutter</strong>.</p>
+    <img src="https://user-images.githubusercontent.com/74038190/212749168-86d6c7ab-98da-409b-998f-c5b74721badd.gif" alt="Profile Image" />
   </header>
 
   <div class="content">
@@ -136,30 +173,24 @@
       <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-v3.9.6-blue?logo=python" alt="Python Badge" /></a>
       <a href="https://flutter.dev/"><img src="https://img.shields.io/badge/Flutter-v3.10.0-blue?logo=flutter" alt="Flutter Badge" /></a>
     </div>
-    <div class="badge-container">
-      <a href="https://validator.w3.org/"><img src="https://img.shields.io/badge/HTML5-v5-red?logo=html5" alt="HTML5 Badge" /></a>
-      <a href="https://www.w3.org/Style/CSS/"><img src="https://img.shields.io/badge/CSS3-v3-blue?logo=css3" alt="CSS3 Badge" /></a>
-      <a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/SQL-valid-lightgrey?logo=postgresql" alt="SQL Badge" /></a>
-      <a href="https://www.gnu.org/software/bash/"><img src="https://img.shields.io/badge/Shell_Bash-v5.1-black?logo=gnu-bash" alt="Shell/Bash Badge" /></a>
-    </div>
 
     <h2>💻 Featured Projects</h2>
     <div class="projects">
       <div class="project-item">
         <h3><a href="https://github.com/mustafataha5/New_Book_store">ReadEase</a></h3>
-        <p>Online Book Store built using Django and Jinja2 with AJAX-based smooth UI, book reviews, and more.</p>
+        <p>Online Book Store built using Django with AJAX-based UI and features like book reviews and ratings.</p>
       </div>
       <div class="project-item">
         <h3><a href="https://github.com/mustafataha5/palrent">PalRent</a></h3>
-        <p>Apartment reservation system using Spring Boot with secure authentication and admin dashboard.</p>
+        <p>Apartment booking system with secure authentication and admin dashboard, built with Spring Boot.</p>
       </div>
       <div class="project-item">
         <h3><a href="https://github.com/mustafataha5/LinkUp">LinkUp</a></h3>
-        <p>Social Media Platform using MERN stack with post creation, user authentication, and real-time updates.</p>
+        <p>Social Media Platform using MERN stack with real-time updates and post creation features.</p>
       </div>
       <div class="project-item">
         <h3><a href="https://github.com/mustafataha5/e-commerce/">E-Commerce</a></h3>
-        <p>Shopping mall web application built with React, Node.js, MongoDB, and Flutter with real-time features.</p>
+        <p>Shopping mall web application with real-time features, built using React, Node.js, and MongoDB.</p>
       </div>
     </div>
 
@@ -180,7 +211,7 @@
       <a href="https://leetcode.com/mustafataha5/">LeetCode</a>
     </div>
 
-    <h2>Some Pics</h2>
+    <h2>📸 Some Pics</h2>
     <div class="images-container">
       <img src="https://github.com/mustafataha5/e-commerce/blob/master/images/entry.png" alt="E-Commerce Entry">
       <img src="https://github.com/mustafataha5/e-commerce/blob/master/images/main.png" alt="E-Commerce Main">
@@ -188,6 +219,10 @@
       <img src="https://github.com/mustafataha5/LinkUp/blob/master/User.png" alt="LinkUp User">
     </div>
   </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Mustafa Taha | All rights reserved.</p>
+  </footer>
 </body>
 
 </html>
