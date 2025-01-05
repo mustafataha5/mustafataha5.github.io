@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mustafa Taha - Full Stack Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -128,7 +129,54 @@
     h3{
       margin: 5px 45px;
     }
-    .projects {
+
+  .fixed-height-card {
+    height: 650px; /* Fixed height */
+    width: 100%; /* Make it take full width */
+    max-width: 360px; /* Set a maximum width for larger screens */
+    margin: 0 auto; /* Center the card */
+    display: flex;
+    flex-direction: column;
+  }
+  .fixed-height-card2 {
+    height: 700px; /* Fixed height */
+    width: 100%; /* Make it take full width */
+    max-width: 360px; /* Set a maximum width for larger screens */
+    margin: 0 auto; /* Center the card */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fixed-height-card  .fixed-height-card2 .card-body {
+    flex-grow: 1; /* Make the card body expand to fill the available space */
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .fixed-height-card {
+      height: 900px; /* Reduce height on smaller screens */
+      max-width: 90%; /* Set max-width for mobile devices */
+    }
+    .fixed-height-card2{
+      height: 100px; /* Reduce height on smaller screens */
+      max-width: 90%; /* Set max-width for mobile devices */
+      margin-bottom: 900px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .fixed-height-card {
+      height: 1200px; /* Further reduce height on very small screens */
+      max-width: 95%; /* Adjust width for very small screens */
+    }
+    .fixed-height-card2 {
+      height: 1200px; /* Further reduce height on very small screens */
+      max-width: 95%; /* Adjust width for very small screens */
+      margin-bottom: 100px;
+    }
+  }
+
+   .projects {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
@@ -171,7 +219,7 @@
         grid-template-columns: 1fr;
         /* Single column layout for smaller screens */
       }
-    }
+    } */
 
 
     .skills-container {
@@ -218,13 +266,23 @@
         /* 1 item per row on mobile screens */
       }
     }
+
+    span {
+            color: #3e64ff;
+            font-weight: bold;
+        }
+    #my-title{
+      color: wheat;
+      font-weight: bold;
+    }    
   </style>
 </head>
 
 <body>
   <header>
     <h1>Hi, I'm Mustafa Taha</h1>
-    <p>Full Stack Developer | Flutter Developer | DevOps</p>
+    <h3 id="my-title">I'm <span id="home_i_am"></span></h3>
+    <!-- <p>Full Stack Developer | Flutter Developer | DevOps</p> -->
     <p>I build functional, scalable applications with a focus on performance, security, and usability.</p>
     <p align="center">
       <img src="https://user-images.githubusercontent.com/74038190/212749168-86d6c7ab-98da-409b-998f-c5b74721badd.gif"
@@ -232,249 +290,424 @@
     </p>
   </header>
 
-  <div class="content last">
-    <h2 class="title">🔧 Tools & Technical Skills</h2>
 
+
+
+  <h2 class="title text-center mt-5">🚀 Projects</h2>
+
+  <div class="container my-5">
+    <div class="row">
+      
+      <!-- Project 1: ReadEase -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card shadow-sm fixed-height-card">
+          <img src="img/book2.png" width="400" height="200" class="card-img-top" alt="ReadEase">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="https://github.com/mustafataha5/New_Book_store" target="_blank" class="text-decoration-none text-primary">ReadEase</a>
+            </h5>
+            <p class="card-text">An online bookstore built with Django and AJAX, offering book search, reviews, and user management.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+              <li>Book search and filtering</li>
+              <li>User profiles and reviews</li>
+              <li>AJAX-powered dynamic interface</li>
+            </ul>
+            <p><strong>Security:</strong></p>
+            <ul>
+              <li>Secure authentication with hashed passwords</li>
+              <li>Role-based access for admins</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project 2: PalRent -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card shadow-sm fixed-height-card">
+          <img src="img/palrent.png" width="400" height="200" class="card-img-top" alt="PalRent">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="https://github.com/mustafataha5/palrent" target="_blank" class="text-decoration-none text-primary">PalRent</a>
+            </h5>
+            <p class="card-text">A secure apartment reservation system using Spring Boot, offering real-time availability and booking management.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+              <li>Apartment search with filters</li>
+              <li>Admin dashboard for property management</li>
+              <li>Real-time availability updates</li>
+            </ul>
+            <p><strong>Security:</strong></p>
+            <ul>
+              <li>JWT-based authentication</li>
+              <li>Role-based access for admins</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project 3: LinkUp -->
+      <div class="col-md-6 col-lg-4 mb-4 ">
+        <div class="card shadow-sm fixed-height-card">
+          <img src="img/linkup.png" width="400" height="200" class="card-img-top" alt="LinkUp">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="https://github.com/mustafataha5/LinkUp" target="_blank" class="text-decoration-none text-primary">LinkUp</a>
+            </h5>
+            <p class="card-text">A social media platform built with the MERN stack, enabling real-time user interactions like posts and notifications.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+              <li>Post creation and multimedia support</li>
+              <li>Real-time notifications with Socket.io</li>
+              <li>Follow functionality with instant updates</li>
+            </ul>
+            <p><strong>Security:</strong></p>
+            <ul>
+              <li>JWT authentication for secure logins</li>
+              <li>Input sanitization to prevent XSS attacks</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project 4: E-Commerce -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card shadow-sm  fixed-height-card2">
+          <img src="img/entry2.png" width="400" height="300" class="card-img-top" alt="E-Commerce">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="https://github.com/mustafataha5/e-commerce/" target="_blank" class="text-decoration-none text-primary">E-Commerce</a>
+            </h5>
+            <p class="card-text">A shopping platform using React, Node.js, MongoDB, and Flutter, providing real-time updates and secure transactions.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+              <li>Product browsing and cart management</li>
+              <li>Order tracking and stock updates</li>
+              <li>Admin panel for product and order management</li>
+            </ul>
+            <p><strong>Security:</strong></p>
+            <ul>
+              <li>Secure login with JWT tokens</li>
+              <li>Role-based access for admins</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  
+
+
+  <div class="container mt-5" id="skill">
+    <h2 class="text-center my-5">🔧 Tools & Technical Skills</h2>
+  
     <!-- Languages Section -->
-    <h3>Languages</h3>
-    <div class="skills-container">
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java" />
-        <p><strong>Java</strong></p>
+    <h3 class="text-light  bg-dark my-4 p-2" >Languages</h3>
+    <div class="row row-cols-4 row-cols-md-6 row-cols-lg-8 g-3 mb-5">
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java" />
+        </div>
+        <p class="text-center"><strong>Java</strong></p>
       </div>
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" />
-        <p><strong>JavaScript (ES6)</strong></p>
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" />
+        </div>
+        <p class="text-center"><strong>JavaScript (ES6)</strong></p>
       </div>
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" />
-        <p><strong>Python</strong></p>
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" />
+        </div>
+        <p class="text-center"><strong>Python</strong></p>
       </div>
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/c-programming.png" alt="C" />
-        <p><strong>C</strong></p>
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img src="https://img.icons8.com/color/48/000000/c-programming.png" alt="C" />
+        </div>
+        <p class="text-center"><strong>C</strong></p>
       </div>
-      <div class="skill-item">
-        <img src="https://user-images.githubusercontent.com/5421823/62779159-4cf76880-baaa-11e9-8318-e20a1aaa913a.png" alt="Assembly" />
-        <p><strong>Assembly (8086, PIC16)</strong></p>
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img  width="50px" src="https://user-images.githubusercontent.com/5421823/62779159-4cf76880-baaa-11e9-8318-e20a1aaa913a.png" alt="Assembly" />
+        </div>
+        <p class="text-center"><strong>Assembly (8086, PIC16)</strong></p>
       </div>
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/dart.png" alt="Dart" />
-        <p><strong>Dart</strong></p>
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img src="https://img.icons8.com/color/48/000000/dart.png" alt="Dart" />
+        </div>
+        <p class="text-center"><strong>Dart</strong></p>
       </div>
     </div>
-
+  
     <!-- Frontend Section -->
-    <h3>Frontend</h3>
-    <div class="skills-container">
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5" />
-        <p><strong>HTML5</strong></p>
+    <h3 class="text-light  bg-dark my-4 p-2">Frontend</h3>
+    <div class="row row-cols-4 row-cols-md-6 row-cols-lg-8 g-3 mb-5">
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5" />
+        </div>
+        <p class="text-center"><strong>HTML5</strong></p>
       </div>
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3" />
-        <p><strong>CSS3</strong></p>
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3" />
+        </div>
+        <p class="text-center"><strong>CSS3</strong></p>
       </div>
-      <div class="skill-item">
-        <img src="https://v5.getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap 5" />
-        <p><strong>Bootstrap 5</strong></p>
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img  width="50px" src="https://v5.getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap 5" />
+        </div>
+        <p class="text-center"><strong>Bootstrap 5</strong></p>
       </div>
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React" />
-        <p><strong>React</strong></p>
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React" />
+        </div>
+        <p class="text-center"><strong>React</strong></p>
       </div>
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/material-ui.png" alt="Material UI" />
-        <p><strong>Material UI</strong></p>
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img src="https://img.icons8.com/color/48/000000/material-ui.png" alt="Material UI" />
+        </div>
+        <p class="text-center"><strong>Material UI</strong></p>
       </div>
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/flutter.png" alt="Flutter" />
-        <p><strong>Flutter</strong></p>
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img src="https://img.icons8.com/color/48/000000/flutter.png" alt="Flutter" />
+        </div>
+        <p class="text-center"><strong>Flutter</strong></p>
       </div>
     </div>
-
+  
     <!-- Backend Section -->
-    <h3>Backend</h3>
-    <div class="skills-container">
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/spring-logo.png" alt="Spring Boot" />
-        <p><strong>Spring Boot</strong></p>
+    <h3 class="text-light  bg-dark my-4 p-2">Backend</h3>
+    <div class="row row-cols-4 row-cols-md-6 row-cols-lg-8 g-3 mb-5">
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img src="https://img.icons8.com/color/48/000000/spring-logo.png" alt="Spring Boot" />
+        </div>
+        <p class="text-center"><strong>Spring Boot</strong></p>
       </div>
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/express-js.png" alt="Express" />
-        <p><strong>Express</strong></p>
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img src="https://img.icons8.com/color/48/000000/express-js.png" alt="Express" />
+        </div>
+        <p class="text-center"><strong>Express</strong></p>
       </div>
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js" />
-        <p><strong>Node.js</strong></p>
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js" />
+        </div>
+        <p class="text-center"><strong>Node.js</strong></p>
       </div>
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/flask.png" alt="Flask" />
-        <p><strong>Flask</strong></p>
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img src="https://img.icons8.com/color/48/000000/flask.png" alt="Flask" />
+        </div>
+        <p class="text-center"><strong>Flask</strong></p>
       </div>
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/django.png" alt="Django" />
-        <p><strong>Django</strong></p>
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img src="https://img.icons8.com/color/48/000000/django.png" alt="Django" />
+        </div>
+        <p class="text-center"><strong>Django</strong></p>
       </div>
-      <div class="skill-item">
-        <img src="https://quintagroup.com/cms/python/images/jinja2.png/jinja2.png" alt="Jinja2" />
-        <p><strong>Jinja2</strong></p>
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img src="https://quintagroup.com/cms/python/images/jinja2.png/jinja2.png" width="50px" alt="Jinja2" />
+        </div>
+        <p class="text-center"><strong>Jinja2</strong></p>
       </div>
     </div>
-
+  
     <!-- DevOps Section -->
-    <h3>DevOps</h3>
-    <div class="skills-container">
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/ansible.png" alt="Ansible" />
-        <p><strong>Ansible</strong></p>
+    <h3 class="text-light  bg-dark my-4 p-2"> DevOps</h3>
+    <div class="row row-cols-4 row-cols-md-6 row-cols-lg-8 g-3 mb-5">
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img src="https://img.icons8.com/color/48/000000/ansible.png" alt="Ansible" />
+        </div>
+        <p class="text-center"><strong>Ansible</strong></p>
       </div>
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/docker.png" alt="Docker" />
-        <p><strong>Docker</strong></p>
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img src="https://img.icons8.com/color/48/000000/docker.png" alt="Docker" />
+        </div>
+        <p class="text-center"><strong>Docker</strong></p>
       </div>
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/openvpn.png" alt="OpenVPN" />
-        <p><strong>OpenVPN</strong></p>
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img src="https://img.icons8.com/color/48/000000/openvpn.png" alt="OpenVPN" />
+        </div>
+        <p class="text-center"><strong>OpenVPN</strong></p>
       </div>
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/jenkins.png" alt="Jenkins" />
-        <p><strong>Jenkins</strong></p>
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img src="https://img.icons8.com/color/48/000000/jenkins.png" alt="Jenkins" />
+        </div>
+        <p class="text-center"><strong>Jenkins</strong></p>
       </div>
-      <div class="skill-item">
-        <img src="data:image/png;base64,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" alt="Ovirt" />
-        <p><strong>Ovirt</strong></p>
+
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img width="50px" src="https://framerusercontent.com/images/DpFlQxGUeuFQ4c035JgoDfQos.jpg" alt="GitHub Actions" />
+        </div>
+        <p class="text-center"><strong>GitHub Actions</strong></p>
       </div>
+
+      <div class="col">
+        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+          <img width="50px" src="data:image/png;base64,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" alt="Ovirt" />
+        </div>
+        <p class="text-center"><strong>Ovirt</strong></p>
+      </div>
+    
+      
+
     </div>
 
-    <!-- Other Tools Section -->
-    <h3>Other Tools</h3>
-    <div class="skills-container">
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/sql.png" alt="SQL" />
-        <p><strong>SQL</strong></p>
-      </div>
-      <div class="skill-item">
-        <img src="https://www.tenfold-security.com/wp-content/uploads/LDAP.png" alt="LDAP" />
-        <p><strong>LDAP</strong></p>
-      </div>
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/firebase.png" alt="Firebase" />
-        <p><strong>Firebase</strong></p>
-      </div>
-      <div class="skill-item">
-        <img src="https://cdn.icon-icons.com/icons2/2407/PNG/512/aws_icon_146074.png" alt="AWS" />
-        <p><strong>AWS (EC2, S3)</strong></p>
-      </div>
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git" />
-        <p><strong>Git</strong></p>
-      </div>
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/github.png" alt="GitHub" />
-        <p><strong>GitHub</strong></p>
-      </div>
+<!-- Database Section -->
+<h3 class="text-light bg-dark my-4 p-2"> Databases</h3>
+<div class="row row-cols-4 row-cols-md-6 row-cols-lg-8 g-3 mb-5">
+  <div class="col">
+    <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+      <img src="https://img.icons8.com/color/48/000000/mysql.png" alt="MySQL" />
     </div>
+    <p class="text-center"><strong>MySQL</strong></p>
+  </div>
 
-    <!-- Operating Systems Section -->
-    <h3>Operating Systems</h3>
-    <div class="skills-container">
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/windows-10.png" alt="Windows" />
-        <p><strong>Windows</strong></p>
-      </div>
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/ubuntu.png" alt="Ubuntu" />
-        <p><strong>Ubuntu</strong></p>
-      </div>
-      <div class="skill-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Fedora_icon_%282021%29.svg/2089px-Fedora_icon_%282021%29.svg.png" alt="Fedora" />
-        <p><strong>Fedora</strong></p>
-      </div>
-      <div class="skill-item">
-        <img src="https://img.icons8.com/color/48/000000/centos.png" alt="CentOS" />
-        <p><strong>CentOS</strong></p>
-      </div>
+  <div class="col">
+    <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+      <img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB" />
     </div>
-
+    <p class="text-center"><strong>MongoDB</strong></p>
   </div>
 
-
-<h2 class="title">🚀 Projects</h2>
-<div class="projects">
-  <!-- Project 1: ReadEase -->
-  <div class="project-item">
-    <h3><a href="https://github.com/mustafataha5/New_Book_store" target="_blank">ReadEase</a></h3>
-    <p>An online bookstore built with Django and AJAX, offering book search, reviews, and user management.</p>
-    <p><strong>Key Features:</strong></p>
-    <ul>
-      <li>Book search and filtering</li>
-      <li>User profiles and reviews</li>
-      <li>AJAX-powered dynamic interface</li>
-    </ul>
-    <p><strong>Security:</strong></p>
-    <ul>
-      <li>Secure authentication with hashed passwords</li>
-      <li>Role-based access for admins</li>
-    </ul>
+  <div class="col">
+    <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+      <img width="50px" src="https://banner2.cleanpng.com/20180823/pbs/kisspng-sqlite-database-android-mysql-sqlite-logo-svg-vector-amp-png-transparent-vec-1713950547459.webp" alt="SQLite" />
+    </div>
+    <p class="text-center"><strong>SQLite</strong></p>
   </div>
 
-  <!-- Project 2: PalRent -->
-  <div class="project-item">
-    <h3><a href="https://github.com/mustafataha5/palrent" target="_blank">PalRent</a></h3>
-    <p>A secure apartment reservation system using Spring Boot, offering real-time availability and booking management.</p>
-    <p><strong>Key Features:</strong></p>
-    <ul>
-      <li>Apartment search with filters</li>
-      <li>Admin dashboard for property management</li>
-      <li>Real-time availability updates</li>
-    </ul>
-    <p><strong>Security:</strong></p>
-    <ul>
-      <li>JWT-based authentication</li>
-      <li>Role-based access for admins</li>
-    </ul>
+  <div class="col">
+    <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+      <img src="https://img.icons8.com/color/48/000000/postgreesql.png" alt="Postgres" />
+    </div>
+    <p class="text-center"><strong>Postgres</strong></p>
   </div>
 
-  <!-- Project 3: LinkUp -->
-  <div class="project-item">
-    <h3><a href="https://github.com/mustafataha5/LinkUp" target="_blank">LinkUp</a></h3>
-    <p>A social media platform built with the MERN stack, enabling real-time user interactions like posts and notifications.</p>
-    <p><strong>Key Features:</strong></p>
-    <ul>
-      <li>Post creation and multimedia support</li>
-      <li>Real-time notifications with Socket.io</li>
-      <li>Follow functionality with instant updates</li>
-    </ul>
-    <p><strong>Security:</strong></p>
-    <ul>
-      <li>JWT authentication for secure logins</li>
-      <li>Input sanitization to prevent XSS attacks</li>
-    </ul>
+  <div class="col">
+    <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+      <img src="https://img.icons8.com/color/48/000000/firebase.png" alt="Firebase" />
+    </div>
+    <p class="text-center"><strong>Firebase</strong></p>
   </div>
-
-  <!-- Project 4: E-Commerce -->
-  <div class="project-item">
-    <h3><a href="https://github.com/mustafataha5/e-commerce/" target="_blank">E-Commerce</a></h3>
-    <p>A shopping platform using React, Node.js, MongoDB, and Flutter, providing real-time updates and secure transactions.</p>
-    <p><strong>Key Features:</strong></p>
-    <ul>
-      <li>Product browsing and cart management</li>
-      <li>Order tracking and stock updates</li>
-      <li>Admin panel for product and order management</li>
-    </ul>
-    <p><strong>Security:</strong></p>
-    <ul>
-      <li>Secure login with JWT tokens</li>
-      <li>Role-based access for admins</li>
-    </ul>
+  <div class="col">
+    <div class="mb-2 d-flex justify-content-center align-items-center" style="height: 50px;">
+      <img width="50px" src="https://www.tenfold-security.com/wp-content/uploads/LDAP.png" alt="LDAP" />
+    </div>
+    <p class="text-center"><strong>LDAP</strong></p>
   </div>
 </div>
+
+<!-- Other Tools Section -->
+<h3 class="text-light bg-dark my-4 p-2">Other Tools</h3>
+<div class="row row-cols-4 row-cols-md-6 row-cols-lg-8 g-3 mb-5">
+
+  <!-- Firebase -->
+  <div class="col">
+    <div class="mb-2 d-flex justify-content-center align-items-center" style="height: 50px;">
+      <img src="https://img.icons8.com/color/48/000000/firebase.png" alt="Firebase" />
+    </div>
+    <p class="text-center"><strong>Firebase</strong></p>
+  </div>
+
+  <!-- AWS -->
+  <div class="col">
+    <div class="mb-2 d-flex justify-content-center align-items-center" style="height: 50px;">
+      <img width="50px" src="https://cdn.icon-icons.com/icons2/2407/PNG/512/aws_icon_146074.png" alt="AWS" />
+    </div>
+    <p class="text-center"><strong>AWS (EC2, S3)</strong></p>
+  </div>
+
+  <!-- Git -->
+  <div class="col">
+    <div class="mb-2 d-flex justify-content-center align-items-center" style="height: 50px;">
+      <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git" />
+    </div>
+    <p class="text-center"><strong>Git</strong></p>
+  </div>
+
+  <!-- GitHub -->
+  <div class="col">
+    <div class="mb-2 d-flex justify-content-center align-items-center" style="height: 50px;">
+      <img src="https://img.icons8.com/color/48/000000/github.png" alt="GitHub" />
+    </div>
+    <p class="text-center"><strong>GitHub</strong></p>
+  </div>
+
+  <!-- AJAX -->
+  <div class="col">
+    <div class="mb-2 d-flex justify-content-center align-items-center" style="height: 50px;">
+      <img width="50px" src="https://www.w3schools.com/whatis/img_ajax.jpg" alt="AJAX" />
+    </div>
+    <p class="text-center"><strong>AJAX</strong></p>
+  </div>
+
+  <!-- Socket.io -->
+  <div class="col">
+    <div class="mb-2 d-flex justify-content-center align-items-center" style="height: 50px;">
+      <img width="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Socket-io.svg/1200px-Socket-io.svg.png" alt="Socket.io" />
+    </div>
+    <p class="text-center"><strong>Socket.io</strong></p>
+  </div>
+
+</div
+
+<!-- Operating Systems Section -->
+<h3 class="text-light  bg-dark my-4 p-2">Operating Systems</h3>
+<div class="row row-cols-4 row-cols-md-6 row-cols-lg-8 g-3 mb-5">
+  <div class="col">
+    <div class="mb-2 d-flex justify-content-center align-items-center" style="height: 50px;">
+      <img src="https://img.icons8.com/color/48/000000/windows-10.png" alt="Windows" />
+    </div>
+    <p  class="text-center"><strong>Windows</strong></p>
+  </div>
+  <div class="col">
+    <div class="mb-2 d-flex justify-content-center align-items-center" style="height: 50px;">
+      <img src="https://img.icons8.com/color/48/000000/ubuntu.png" alt="Ubuntu" />
+    </div>
+    <p class="text-center"><strong>Ubuntu</strong></p>
+  </div>
+  <div class="col">
+    <div class="mb-2 d-flex justify-content-center align-items-center" style="height: 50px;">
+      <img width="50px" src=" https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Fedora_icon_%282021%29.svg/2089px-Fedora_icon_%282021%29.svg.png" alt="Fedora" />
+    </div>
+    <p class="text-center"><strong>Fedora</strong></p>
+  </div>
+  <div class="col">
+    <div class="mb-2 d-flex justify-content-center align-items-center" style="height: 50px;">
+      <img src="https://img.icons8.com/color/48/000000/centos.png" alt="CentOS" />
+    </div>
+    <p class="text-center"><strong>CentOS</strong></p>
+  </div>
 </div>
 
+  </div>
+  
 
 
-  <h2 class="title">📈 GitHub Stats</h2>
+
+
+
+  <h2 class="title text-center my-5">📈 GitHub Stats</h2>
   <div class="github-stats">
     <div>
       <img
@@ -487,16 +720,19 @@
     </div>
   </div>
 
-  <h2 class="title">🤝 Contact Me</h2>
-  <div class="contact last">
-    <a href="https://www.linkedin.com/in/mustafa-taha-3b87771b4/" target="_blank">
-      <i class="fab fa-linkedin"></i> LinkedIn
+  <h2 class="title text-center my-5">🤝 Contact Me</h2>
+  <div class="d-flex justify-content-center gap-4 my-5">
+    <a href="mailto:mustafa.taha.mu95@gmail.com" class="btn btn-outline-danger d-flex align-items-center px-4 py-2 rounded">
+      <i class="fas fa-envelope me-2"></i> Gmail
     </a>
-    <a href="https://github.com/mustafataha5" target="_blank">
-      <i class="fab fa-github"></i> GitHub
+    <a href="https://www.linkedin.com/in/mustafa-taha-3b87771b4/" target="_blank" class="btn btn-outline-primary d-flex align-items-center px-4 py-2 rounded">
+      <i class="fab fa-linkedin me-2"></i> LinkedIn
     </a>
-    <a href="https://leetcode.com/mustafataha5/" target="_blank">
-      <i class="fab fa-leanpub"></i> LeetCode
+    <a href="https://github.com/mustafataha5" target="_blank" class="btn btn-outline-dark d-flex align-items-center px-4 py-2 rounded">
+      <i class="fab fa-github me-2"></i> GitHub
+    </a>
+    <a href="https://leetcode.com/u/user2128Dt/" target="_blank" class="btn btn-outline-warning d-flex align-items-center px-4 py-2 rounded">
+      <i class="fab fa-leanpub me-2"></i> LeetCode
     </a>
   </div>
   
@@ -504,6 +740,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
   </div>
+  <script src="script.js"></script>
 </body>
 
 </html>
