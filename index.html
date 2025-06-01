@@ -4,22 +4,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mustafa Taha - Full Stack Developer, projects using Django, MERN, Spring Boot, Flutter" />
+  <meta name="keywords" content="Mustafa Taha, developer, programming, Full Stack Developer, Django, MERN, Flutter, Spring Boot" />
+
   <title>Mustafa Taha - Full Stack Developer</title>
+  
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <script>
-    // Optional: Dark mode toggle script (you can add a button to trigger this)
-    // This will check system preference or a 'theme' in local storage
+    tailwind.config = {
+      darkMode: 'class', // This tells Tailwind to use the 'dark' class for dark mode
+      theme: {
+        extend: {
+          // You can put any custom theme extensions here if needed
+        }
+      }
+    }
+  </script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <script>
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+
       document.documentElement.classList.add('dark')
     } else {
+       
       document.documentElement.classList.remove('dark')
     }
   </script>
+
 </head>
 
 <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white font-sans">
-  <header class="text-center py-16 bg-gray-100 dark:bg-gray-800 shadow-lg">
+ <header class="relative bg-gray-100 dark:bg-gray-800 shadow-lg pb-16">
+  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="#" class="text-2xl font-bold text-gray-900 dark:text-white">
+      Mustafa Taha
+    </a>
+    <div class="hidden md:flex space-x-8">
+      <a href="#projects" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Projects</a>
+      <a href="#skill" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Skills</a>
+      <a href="#certificates" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Certificates</a>
+      <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Contact</a>
+    </div>
+
+    <div class="flex items-center space-x-4">
+      <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200 focus:outline-none">
+        <i class="fas fa-sun hidden dark:inline-block"></i>
+        <i class="fas fa-moon inline-block dark:hidden"></i>
+      </button>
+      <button id="mobileMenuButton" class="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobileMenu" class="md:hidden bg-white dark:bg-gray-800 shadow-lg py-4 transition-all duration-300 ease-in-out hidden absolute w-full z-10">
+    <a href="#projects" class="block px-6 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 text-lg font-medium">Projects</a>
+    <a href="#skill" class="block px-6 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 text-lg font-medium">Skills</a>
+    <a href="#certificates" class="block px-6 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 text-lg font-medium">Certificates</a>
+    <a href="#contact" class="block px-6 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 text-lg font-medium">Contact</a>
+  </div>
+
+  <div class="text-center py-16">
     <h1 class="text-5xl font-extrabold text-gray-900 dark:text-white mb-4 leading-tight">
       Hi, I'm Mustafa Taha
     </h1>
@@ -31,11 +79,13 @@
     </p>
     <div class="flex justify-center">
       <img src="https://user-images.githubusercontent.com/74038190/212749168-86d6c7ab-98da-409b-998f-c5b74721badd.gif"
-        alt="Profile Image" class="rounded-full shadow-xl border-4 border-indigo-500 dark:border-indigo-400 w-48 h-48 object-cover" />
+        alt="Profile Image"
+        class="rounded-full shadow-xl border-4 border-indigo-500 dark:border-indigo-400 w-48 h-48 object-cover" />
     </div>
-  </header>
+  </div>
+</header>
 
-  ---
+  
 
   <section class="py-16 bg-white dark:bg-gray-900">
     <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
@@ -181,29 +231,35 @@
           Languages
         </h3>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Java</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">JavaScript (ES6)</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Python</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/c-programming.png" alt="C" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">C</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img width="50px"
               src="https://user-images.githubusercontent.com/5421823/62779159-4cf76880-baaa-11e9-8318-e20a1aaa913a.png"
               alt="Assembly" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Assembly (8086, PIC16)</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/dart.png" alt="Dart" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Dart</p>
           </div>
@@ -215,28 +271,34 @@
           Frontend
         </h3>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">HTML5</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">CSS3</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img width="50px" src="https://v5.getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png"
               alt="Bootstrap 5" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Bootstrap 5</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">React</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/material-ui.png" alt="Material UI" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Material UI</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/flutter.png" alt="Flutter" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Flutter</p>
           </div>
@@ -248,27 +310,33 @@
           Backend
         </h3>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/spring-logo.png" alt="Spring Boot" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Spring Boot</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/express-js.png" alt="Express" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Express</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Node.js</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/flask.png" alt="Flask" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Flask</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/django.png" alt="Django" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Django</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://quintagroup.com/cms/python/images/jinja2.png/jinja2.png" width="50px" alt="Jinja2"
               class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Jinja2</p>
@@ -281,28 +349,34 @@
           DevOps
         </h3>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/ansible.png" alt="Ansible" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Ansible</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/docker.png" alt="Docker" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Docker</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/openvpn.png" alt="OpenVPN" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">OpenVPN</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/jenkins.png" alt="Jenkins" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Jenkins</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img width="50px" src="https://framerusercontent.com/images/DpFlQxGUeuFQ4c035JgoDfQos.jpg"
               alt="GitHub Actions" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">GitHub Actions</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img width="50px" src="https://www.marksei.com/wp-content/uploads/2019/01/oVirt-Logo.png" alt="Ovirt"
               class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Ovirt</p>
@@ -315,29 +389,35 @@
           Databases
         </h3>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/mysql.png" alt="MySQL" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">MySQL</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">MongoDB</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img width="50px"
               src="https://banner2.cleanpng.com/20180823/pbs/kisspng-sqlite-database-android-mysql-sqlite-logo-svg-vector-amp-png-transparent-vec-1713950547459.webp"
               alt="SQLite" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">SQLite</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/postgreesql.png" alt="Postgres" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Postgres</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/firebase.png" alt="Firebase" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Firebase</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img width="50px" src="https://www.tenfold-security.com/wp-content/uploads/LDAP.png" alt="LDAP"
               class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">LDAP</p>
@@ -350,28 +430,34 @@
           Other Tools
         </h3>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/firebase.png" alt="Firebase" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Firebase</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img width="50px" src="https://cdn.icon-icons.com/icons2/2407/PNG/512/aws_icon_146074.png" alt="AWS"
               class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">AWS (EC2, S3)</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Git</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/github.png" alt="GitHub" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">GitHub</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img width="50px" src="https://www.w3schools.com/whatis/img_ajax.jpg" alt="AJAX" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">AJAX</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img width="50px"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Socket-io.svg/1200px-Socket-io.svg.png"
               alt="Socket.io" class="mb-2" />
@@ -385,21 +471,25 @@
           Operating Systems
         </h3>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/windows-10.png" alt="Windows" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Windows</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/ubuntu.png" alt="Ubuntu" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Ubuntu</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img width="50px"
               src=" https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Fedora_icon_%282021%29.svg/2089px-Fedora_icon_%282021%29.svg.png"
               alt="Fedora" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Fedora</p>
           </div>
-          <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/centos.png" alt="CentOS" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">CentOS</p>
           </div>
@@ -408,7 +498,67 @@
     </div>
   </section>
 
-  ---
+   <section id="certificates" class="py-16 bg-gray-100 dark:bg-gray-800">
+  <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
+    🎓 Certifications
+  </h2>
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+        <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">Full Stack Web Development Bootcamp (1200 Hours)</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mb-1 flex-grow">Technologies: Django, Spring Boot, MERN Stack</p>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Issued: Sep 2024</p>
+        <a href="https://app.diplomasafe.com/en-US/certificates/d874e1c4bdf60d55c26117b998ea2c14b23acbdf5" target="_blank" class="text-indigo-500 dark:text-indigo-300 font-medium hover:underline inline-flex items-center">
+          View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+        </a>
+      </div>
+
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+        <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">Flutter & Dart - The Complete Guide [2025 Edition]</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mb-1 flex-grow">Instructor: Maximilian Schwarzmüller (Academind)</p>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Issued: Jan 2025</p>
+        <a href="https://www.udemy.com/certificate/UC-31ddb86d-f115-492d-8a24-86dac9312e1d/" target="_blank" class="text-indigo-500 dark:text-indigo-300 font-medium hover:underline inline-flex items-center">
+          View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+        </a>
+      </div>
+
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+        <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">The Complete Flutter Development Bootcamp with Dart</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mb-1 flex-grow">Instructor: Dr. Angela Yu</p>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Issued: Oct 2024</p>
+        <a href="https://www.udemy.com/certificate/UC-56ab915b-b2ae-4b1d-ae15-ef5bf87344bf/" target="_blank" class="text-indigo-500 dark:text-indigo-300 font-medium hover:underline inline-flex items-center">
+          View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+        </a>
+      </div>
+
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+        <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">Cisco DCAIE – AI Solutions on Cisco Infrastructure Essentials</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mb-1 flex-grow">Covers AI deployment & data center design with Cisco infrastructure.</p>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Issued: Apr 2025</p>
+        <span class="text-gray-400 dark:text-gray-500 italic">Link not available</span>
+      </div>
+
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+        <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">The Complete Networking Fundamentals Course – Your CCNA Start</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mb-1 flex-grow">Instructor: David Bombal</p>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Issued: May 2025</p>
+        <a href="https://www.udemy.com/certificate/UC-08bd8bbf-0480-4106-8b79-8ffabe5029ed/" target="_blank" class="text-indigo-500 dark:text-indigo-300 font-medium hover:underline inline-flex items-center">
+          View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+        </a>
+      </div>
+
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+        <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">DevOps Certification</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mb-1 flex-grow">Provider: Manara</p>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Issued: Dec 2024</p>
+        <span class="text-gray-400 dark:text-gray-500 italic">Link not available</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
   <section class="py-16 bg-white dark:bg-gray-900">
     <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
@@ -425,29 +575,36 @@
 
   ---
 
-  <footer class="py-16 bg-gray-100 dark:bg-gray-800 text-center">
-    <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-8">
-      🤝 Contact Me
-    </h2>
-    <div class="flex flex-wrap justify-center gap-6 px-6">
-      <a href="mailto:mustafa.taha.mu95@gmail.com"
-        class="inline-flex items-center px-8 py-4 bg-indigo-600 text-white text-lg font-medium rounded-full hover:bg-indigo-700 transition-colors duration-300 shadow-md">
-        <i class="fas fa-envelope mr-3"></i> Gmail
-      </a>
-      <a href="https://www.linkedin.com/in/mustafa-taha-3b87771b4/" target="_blank"
-        class="inline-flex items-center px-8 py-4 bg-blue-700 text-white text-lg font-medium rounded-full hover:bg-blue-800 transition-colors duration-300 shadow-md">
-        <i class="fab fa-linkedin mr-3"></i> LinkedIn
-      </a>
-      <a href="https://github.com/mustafataha5" target="_blank"
-        class="inline-flex items-center px-8 py-4 bg-gray-700 text-white text-lg font-medium rounded-full hover:bg-gray-800 transition-colors duration-300 shadow-md">
-        <i class="fab fa-github mr-3"></i> GitHub
-      </a>
-      <a href="https://leetcode.com/u/user2128Dt/" target="_blank"
-        class="inline-flex items-center px-8 py-4 bg-yellow-600 text-white text-lg font-medium rounded-full hover:bg-yellow-700 transition-colors duration-300 shadow-md">
-        <i class="fab fa-leanpub mr-3"></i> LeetCode
-      </a>
+  <footer>
+    <div class="py-16 bg-gray-100 dark:bg-gray-800 text-center">
+      <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-8">
+        🤝 Contact Me
+      </h2>
+      <div class="flex flex-wrap justify-center gap-6 px-6">
+        <a href="mailto:mustafa.taha.mu95@gmail.com"
+          class="inline-flex items-center px-8 py-4 bg-indigo-600 text-white text-lg font-medium rounded-full hover:bg-indigo-700 transition-colors duration-300 shadow-md">
+          <i class="fas fa-envelope mr-3"></i> Gmail
+        </a>
+        <a href="https://www.linkedin.com/in/mustafa-taha-3b87771b4/" target="_blank"
+          class="inline-flex items-center px-8 py-4 bg-blue-700 text-white text-lg font-medium rounded-full hover:bg-blue-800 transition-colors duration-300 shadow-md">
+          <i class="fab fa-linkedin mr-3"></i> LinkedIn
+        </a>
+        <a href="https://github.com/mustafataha5" target="_blank"
+          class="inline-flex items-center px-8 py-4 bg-gray-700 text-white text-lg font-medium rounded-full hover:bg-gray-800 transition-colors duration-300 shadow-md">
+          <i class="fab fa-github mr-3"></i> GitHub
+        </a>
+        <a href="https://leetcode.com/u/user2128Dt/" target="_blank"
+          class="inline-flex items-center px-8 py-4 bg-yellow-600 text-white text-lg font-medium rounded-full hover:bg-yellow-700 transition-colors duration-300 shadow-md">
+          <i class="fab fa-leanpub mr-3"></i> LeetCode
+        </a>
+      </div>
     </div>
+    <footer class="bg-indigo-700 text-white py-6 text-center">
+      <p>© 2025 Mustafa Taha - All rights reserved.</p>
+    </footer>
   </footer>
+
+
 
   <script src="script.js"></script>
 </body>
