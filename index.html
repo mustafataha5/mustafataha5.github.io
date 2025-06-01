@@ -37,28 +37,31 @@
 </head>
 
 <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white font-sans">
- <header class="relative bg-gray-100 dark:bg-gray-800 shadow-lg pb-16">
-  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="#" class="text-2xl font-bold text-gray-900 dark:text-white">
-      Mustafa Taha
-    </a>
-    <div class="hidden md:flex space-x-8">
-      <a href="#projects" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Projects</a>
-      <a href="#skill" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Skills</a>
-      <a href="#certificates" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Certificates</a>
-      <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Contact</a>
-    </div>
+   <nav class="sticky top-0 z-50 w-full bg-gray-100 dark:bg-gray-800 shadow-md py-4">
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <a href="#header" class="text-2xl font-bold text-gray-900 dark:text-white">
+          Mustafa Taha
+        </a>
+        <div class="hidden md:flex space-x-8">
+          <a href="#projects" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Projects</a>
+          <a href="#skill" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Skills</a>
+          <a href="#certificates" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Certificates</a>
+          <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Contact</a>
+        </div>
 
-    <div class="flex items-center space-x-4">
-      <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200 focus:outline-none">
-        <i class="fas fa-sun hidden dark:inline-block"></i>
-        <i class="fas fa-moon inline-block dark:hidden"></i>
-      </button>
-      <button id="mobileMenuButton" class="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none">
-        <i class="fas fa-bars text-xl"></i>
-      </button>
-    </div>
-  </nav>
+        <div class="flex items-center space-x-4">
+          <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200 focus:outline-none">
+            <i class="fas fa-sun hidden dark:inline-block"></i>
+            <i class="fas fa-moon inline-block dark:hidden"></i>
+          </button>
+          <button id="mobileMenuButton" class="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+ <header id="header" class="relative bg-gray-100 dark:bg-gray-800 shadow-lg pb-16">
+
 
   <div id="mobileMenu" class="md:hidden bg-white dark:bg-gray-800 shadow-lg py-4 transition-all duration-300 ease-in-out hidden absolute w-full z-10">
     <a href="#projects" class="block px-6 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 text-lg font-medium">Projects</a>
@@ -87,7 +90,7 @@
 
   
 
-  <section class="py-16 bg-white dark:bg-gray-900">
+  <section id="projects" class="py-16 bg-white dark:bg-gray-900">
     <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
       🚀 Projects
     </h2>
@@ -560,7 +563,7 @@
 </section>
 
 
-  <section class="py-16 bg-white dark:bg-gray-900">
+  <section  id="contact" class="py-16 bg-white dark:bg-gray-900">
     <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
       📈 GitHub Stats
     </h2>
