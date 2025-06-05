@@ -96,3 +96,112 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
     document.documentElement.classList.remove('dark')
 }
 */
+
+ // --- Image Modal (Lightbox) Logic ---
+  const imageModal = document.getElementById('imageModal');
+  const modalImage = document.getElementById('modalImage');
+  const closeModal = document.getElementById('closeModal');
+
+  function openModal(imageSrc, imageAlt) {
+    modalImage.src = imageSrc;
+    modalImage.alt = imageAlt;
+    imageModal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+  }
+
+  function closeAndResetModal() {
+    imageModal.classList.add('hidden');
+    document.body.style.overflow = ''; // Restore scrolling
+    modalImage.src = ''; // Clear image src to save memory
+    modalImage.alt = '';
+  }
+
+  closeModal.addEventListener('click', closeAndResetModal);
+
+  imageModal.addEventListener('click', (e) => {
+    if (e.target === imageModal || e.target === modalImage) {
+      closeAndResetModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !imageModal.classList.contains('hidden')) {
+      closeAndResetModal();
+    }
+  });
+
+
+  // --- Image Slider Logic ---
+  const slidesContainer = document.getElementById('slidesContainer');
+  const slides = slidesContainer.children; // Get all the direct children (image wrappers)
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const dotsContainer = document.getElementById('dotsContainer'); // For pagination dots
+
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+
+  // Function to show a specific slide
+  function showSlide(index) {
+    if (index < 0) {
+      currentIndex = totalSlides - 1; // Loop to last slide
+    } else if (index >= totalSlides) {
+      currentIndex = 0; // Loop to first slide
+    } else {
+      currentIndex = index;
+    }
+    const offset = -currentIndex * 100; // Calculate percentage offset
+    slidesContainer.style.transform = `translateX(${offset}%)`;
+
+    // Update pagination dots (if enabled)
+    if (dotsContainer) {
+      Array.from(dotsContainer.children).forEach((dot, i) => {
+        if (i === currentIndex) {
+          dot.classList.add('bg-white'); // Active dot color
+          dot.classList.remove('bg-gray-400');
+        } else {
+          dot.classList.remove('bg-white');
+          dot.classList.add('bg-gray-400'); // Inactive dot color
+        }
+      });
+    }
+  }
+
+  // Go to the next slide
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  // Go to the previous slide
+  function prevSlide() {
+    showSlide(currentIndex - 1);
+  }
+
+  // Add event listeners to navigation buttons
+  prevBtn.addEventListener('click', prevSlide);
+  nextBtn.addEventListener('click', nextSlide);
+
+  // Initialize dots (create them dynamically)
+  function createDots() {
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('span');
+      dot.classList.add('w-3', 'h-3', 'rounded-full', 'bg-gray-400', 'cursor-pointer', 'transition-colors', 'duration-300');
+      dot.addEventListener('click', () => showSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+    showSlide(0); // Show the first slide and activate its dot
+  }
+
+  // Add click event listeners to images within the slider to open the modal
+  Array.from(slides).forEach(slideDiv => {
+    const img = slideDiv.querySelector('img');
+    if (img) {
+      img.addEventListener('click', () => {
+        openModal(img.src, img.alt);
+      });
+    }
+  });
+
+
+  // Initialize the slider and dots when the page loads
+  document.addEventListener('DOMContentLoaded', createDots);

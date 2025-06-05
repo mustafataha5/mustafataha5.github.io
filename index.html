@@ -4,11 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mustafa Taha - Full Stack Developer, projects using Django, MERN, Spring Boot, Flutter" />
-  <meta name="keywords" content="Mustafa Taha, developer, programming, Full Stack Developer, Django, MERN, Flutter, Spring Boot" />
+  <meta name="description"
+    content="Mustafa Taha - Full Stack Developer, projects using Django, MERN, Spring Boot, Flutter" />
+  <meta name="keywords"
+    content="Mustafa Taha, developer, programming, Full Stack Developer, Django, MERN, Flutter, Spring Boot" />
 
   <title>Mustafa Taha - Full Stack Developer</title>
-  
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -29,7 +31,7 @@
 
       document.documentElement.classList.add('dark')
     } else {
-       
+
       document.documentElement.classList.remove('dark')
     }
   </script>
@@ -37,58 +39,69 @@
 </head>
 
 <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white font-sans">
-   <nav class="sticky top-0 z-50 w-full bg-gray-100 dark:bg-gray-800 shadow-md py-4">
-      <div class="container mx-auto px-6 flex justify-between items-center">
-        <a href="#header" class="text-2xl font-bold text-gray-900 dark:text-white">
-          Mustafa Taha
-        </a>
-        <div class="hidden md:flex space-x-8">
-          <a href="#projects" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Projects</a>
-          <a href="#skill" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Skills</a>
-          <a href="#certificates" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Certificates</a>
-          <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Contact</a>
-        </div>
-
-        <div class="flex items-center space-x-4">
-          <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200 focus:outline-none">
-            <i class="fas fa-sun hidden dark:inline-block"></i>
-            <i class="fas fa-moon inline-block dark:hidden"></i>
-          </button>
-          <button id="mobileMenuButton" class="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none">
-            <i class="fas fa-bars text-xl"></i>
-          </button>
-        </div>
+  <nav class="sticky top-0 z-50 w-full bg-gray-100 dark:bg-gray-800 shadow-md py-4">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <a href="#header" class="text-2xl font-bold text-gray-900 dark:text-white">
+        Mustafa Taha
+      </a>
+      <div class="hidden md:flex space-x-8">
+        <a href="#projects"
+          class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Projects</a>
+        <a href="#skill"
+          class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Skills</a>
+        <a href="#certificates"
+          class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Certificates</a>
+        <a href="#contact"
+          class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Contact</a>
       </div>
-    </nav>
- <header id="header" class="relative bg-gray-100 dark:bg-gray-800 shadow-lg pb-16">
 
-
-  <div id="mobileMenu" class="md:hidden bg-white dark:bg-gray-800 shadow-lg py-4 transition-all duration-300 ease-in-out hidden absolute w-full z-10">
-    <a href="#projects" class="block px-6 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 text-lg font-medium">Projects</a>
-    <a href="#skill" class="block px-6 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 text-lg font-medium">Skills</a>
-    <a href="#certificates" class="block px-6 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 text-lg font-medium">Certificates</a>
-    <a href="#contact" class="block px-6 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 text-lg font-medium">Contact</a>
-  </div>
-
-  <div class="text-center py-16">
-    <h1 class="text-5xl font-extrabold text-gray-900 dark:text-white mb-4 leading-tight">
-      Hi, I'm Mustafa Taha
-    </h1>
-    <h3 class="text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-6">
-      I'm <span id="home_i_am" class="text-indigo-600 dark:text-indigo-400 font-bold"></span>
-    </h3>
-    <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 px-4">
-      I build functional, scalable applications with a focus on performance, security, and usability.
-    </p>
-    <div class="flex justify-center">
-      <img src="https://user-images.githubusercontent.com/74038190/212749168-86d6c7ab-98da-409b-998f-c5b74721badd.gif"
-        alt="Profile Image"
-        class="rounded-full shadow-xl border-4 border-indigo-500 dark:border-indigo-400 w-48 h-48 object-cover" />
+      <div class="flex items-center space-x-4">
+        <button id="darkModeToggle"
+          class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200 focus:outline-none">
+          <i class="fas fa-sun hidden dark:inline-block"></i>
+          <i class="fas fa-moon inline-block dark:hidden"></i>
+        </button>
+        <button id="mobileMenuButton"
+          class="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
     </div>
-  </div>
-</header>
+  </nav>
+  <header id="header" class="relative bg-gray-100 dark:bg-gray-800 shadow-lg pb-16">
 
-  
+
+    <div id="mobileMenu"
+      class="md:hidden bg-white dark:bg-gray-800 shadow-lg py-4 transition-all duration-300 ease-in-out hidden absolute w-full z-10">
+      <a href="#projects"
+        class="block px-6 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 text-lg font-medium">Projects</a>
+      <a href="#skill"
+        class="block px-6 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 text-lg font-medium">Skills</a>
+      <a href="#certificates"
+        class="block px-6 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 text-lg font-medium">Certificates</a>
+      <a href="#contact"
+        class="block px-6 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 text-lg font-medium">Contact</a>
+    </div>
+
+    <div class="text-center py-16">
+      <h1 class="text-5xl font-extrabold text-gray-900 dark:text-white mb-4 leading-tight">
+        Hi, I'm Mustafa Taha
+      </h1>
+      <h3 class="text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-6">
+        I'm <span id="home_i_am" class="text-indigo-600 dark:text-indigo-400 font-bold"></span>
+      </h3>
+      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 px-4">
+        I build functional, scalable applications with a focus on performance, security, and usability.
+      </p>
+      <div class="flex justify-center">
+        <img src="https://user-images.githubusercontent.com/74038190/212749168-86d6c7ab-98da-409b-998f-c5b74721badd.gif"
+          alt="Profile Image"
+          class="rounded-full shadow-xl border-4 border-indigo-500 dark:border-indigo-400 w-48 h-48 object-cover" />
+      </div>
+    </div>
+  </header>
+
+
 
   <section id="projects" class="py-16 bg-white dark:bg-gray-900">
     <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
@@ -189,7 +202,7 @@
 
         <div
           class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
-          <img src="img/entry2.png" alt="E-Commerce" class="w-full h-64 object-cover" />
+          <img src="img/order.png" alt="E-Commerce" class="w-full h-64 object-cover" />
           <div class="p-6 flex flex-col flex-grow">
             <h5 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">
               <a href="https://github.com/mustafataha5/e-commerce/" target="_blank"
@@ -221,7 +234,100 @@
     </div>
   </section>
 
-  ---
+
+<section id="visual-showcase-section" class="py-16 bg-white dark:bg-gray-900">
+  <div class="container mx-auto px-6 max-w-7xl">
+    <h2 class="text-4xl font-extrabold text-center text-gray-900 dark:text-white mb-12">Visual Showcase</h2>
+    <p class="text-xl text-center text-gray-700 dark:text-gray-300 mb-10">
+      A collection of screenshots showcasing various functionalities and user interfaces from my projects. Click on any image to view it full screen.
+    </p>
+
+    <div id="imageSlider" class="relative w-full max-w-4xl py-5 mx-auto overflow-hidden rounded-xl shadow-2xl">
+      <div id="slidesContainer" class="flex transition-transform duration-500 ease-in-out">
+        <div class="w-full flex-shrink-0">
+          <img src="img/imgs/cart.png" alt="E-commerce shopping cart" class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
+          <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Shopping Cart UI</p>
+        </div>
+        <div class="w-full flex-shrink-0">
+          <img src="img/imgs/chart.js.png" alt="Chart.js data visualization example" class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
+          <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Chart.js Integration</p>
+        </div>
+        <div class="w-full flex-shrink-0">
+          <img src="img/imgs/chartjs2.png" alt="Chart.js with multiple datasets" class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
+          <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Advanced Chart View</p>
+        </div>
+        <div class="w-full flex-shrink-0">
+          <img src="img/imgs/chartjs3.png" alt="Chart.js dynamic chart with labels" class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
+          <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Interactive Charts</p>
+        </div>
+        <div class="w-full flex-shrink-0">
+          <img src="img/imgs/charts.png" alt="Dashboard with various charts" class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
+          <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Dashboard Charts</p>
+        </div>
+        <div class="w-full flex-shrink-0">
+          <img src="img/imgs/dashboard.png" alt="Admin dashboard layout" class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
+          <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Digital Market Admin Dashboard</p>
+        </div>
+        <div class="w-full flex-shrink-0">
+          <img src="img/imgs/dashboard1.png" alt="User dashboard interface" class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
+          <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">User Dashboard</p>
+        </div>
+        <div class="w-full flex-shrink-0">
+          <img src="img/imgs/expense.png" alt="Expense tracking interface" class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
+          <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Expense Tracker UI</p>
+        </div>
+        
+        <div class="w-full flex-shrink-0">
+          <img src="img/imgs/order_Detail.png" alt="Order details screen" class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
+          <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Order Details View</p>
+        </div>
+        <div class="w-full flex-shrink-0">
+          <img src="img/imgs/order_detail_dark.png" alt="Order details screen in dark mode" class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
+          <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Order Details (Dark Mode)</p>
+        </div>
+        <div class="w-full flex-shrink-0">
+          <img src="img/imgs/order_detail_l.png" alt="Order details screen in light mode" class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
+          <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Order Details (Light Mode)</p>
+        </div>
+        <div class="w-full flex-shrink-0">
+          <img src="img/imgs/orders.png" alt="Orders list page" class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
+          <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Orders List Management</p>
+        </div>
+        <div class="w-full flex-shrink-0">
+          <img src="img/imgs/payment_success.png" alt="Payment success confirmation" class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
+          <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Payment Success Screen</p>
+        </div>
+        <div class="w-full flex-shrink-0">
+          <img src="img/imgs/register.png" alt="User registration form" class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
+          <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Registration Page</p>
+        </div>
+        <div class="w-full flex-shrink-0">
+          <img src="img/imgs/login.png" alt="User login screen" class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
+          <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Login Page</p>
+        </div>
+        <div class="w-full flex-shrink-0">
+          <img src="img/imgs/sales.png" alt="Sales dashboard with statistics" class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
+          <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Sales Dashboard Overview</p>
+        </div>
+        <div class="w-full flex-shrink-0">
+          <img src="img/imgs/sales2.png" alt="Sales trend analysis chart" class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
+          <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Sales Trend Analysis</p>
+        </div>
+      </div>
+
+      <button id="prevBtn" class="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white p-3 rounded-r-lg text-2xl z-10 hover:bg-opacity-90 transition-opacity focus:outline-none">
+        &#10094;
+      </button>
+      <button id="nextBtn" class="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white p-3 rounded-l-lg text-2xl z-10 hover:bg-opacity-90 transition-opacity focus:outline-none">
+        &#10095;
+      </button>
+
+      <div id="dotsContainer" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+        </div>
+    </div>
+  </div>
+</section>
+
 
   <section id="skill" class="py-16 bg-gray-100 dark:bg-gray-800">
     <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
@@ -304,6 +410,11 @@
             class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <img src="https://img.icons8.com/color/48/000000/flutter.png" alt="Flutter" class="mb-2" />
             <p class="font-medium text-gray-800 dark:text-white">Flutter</p>
+          </div>
+          <div
+            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
+            <img src="https://cdnblog.webkul.com/blog/wp-content/uploads/2024/05/tailwindcss-1633184775.webp" alt="Flutter" class="mb-2" />
+            <p class="font-medium text-gray-800 dark:text-white">Tailwind</p>
           </div>
         </div>
       </div>
@@ -501,69 +612,104 @@
     </div>
   </section>
 
-   <section id="certificates" class="py-16 bg-gray-100 dark:bg-gray-800">
-  <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
-    🎓 Certifications
-  </h2>
-  <div class="container mx-auto px-6">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <section id="certificates" class="py-16 bg-gray-100 dark:bg-gray-800">
+    <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
+      🎓 Certifications
+    </h2>
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-        <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">Full Stack Web Development Bootcamp (1200 Hours)</h3>
-        <p class="text-sm text-gray-600 dark:text-gray-300 mb-1 flex-grow">Technologies: Django, Spring Boot, MERN Stack</p>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Issued: Sep 2024</p>
-        <a href="https://app.diplomasafe.com/en-US/certificates/d874e1c4bdf60d55c26117b998ea2c14b23acbdf5" target="_blank" class="text-indigo-500 dark:text-indigo-300 font-medium hover:underline inline-flex items-center">
-          View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
-        </a>
+        <div
+          class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">Full Stack Web Development
+            Bootcamp (1200 Hours)</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-1 flex-grow">Technologies: Django, Spring Boot, MERN
+            Stack</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Issued: Sep 2024</p>
+          <a href="https://app.diplomasafe.com/en-US/certificates/d874e1c4bdf60d55c26117b998ea2c14b23acbdf5"
+            target="_blank"
+            class="text-indigo-500 dark:text-indigo-300 font-medium hover:underline inline-flex items-center">
+            View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+          </a>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">Flutter & Dart - The Complete
+            Guide [2025 Edition]</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-1 flex-grow">Instructor: Maximilian Schwarzmüller
+            (Academind)</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Issued: Jan 2025</p>
+          <a href="https://www.udemy.com/certificate/UC-31ddb86d-f115-492d-8a24-86dac9312e1d/" target="_blank"
+            class="text-indigo-500 dark:text-indigo-300 font-medium hover:underline inline-flex items-center">
+            View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+          </a>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">The Complete Flutter Development
+            Bootcamp with Dart</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-1 flex-grow">Instructor: Dr. Angela Yu</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Issued: Oct 2024</p>
+          <a href="https://www.udemy.com/certificate/UC-56ab915b-b2ae-4b1d-ae15-ef5bf87344bf/" target="_blank"
+            class="text-indigo-500 dark:text-indigo-300 font-medium hover:underline inline-flex items-center">
+            View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+          </a>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">Cisco DCAIE – AI Solutions on
+            Cisco Infrastructure Essentials</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-1 flex-grow">Covers AI deployment & data center design
+            with Cisco infrastructure.</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Issued: Apr 2025</p>
+          <span class="text-gray-400 dark:text-gray-500 italic">Link not available</span>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">The Complete Networking
+            Fundamentals Course – Your CCNA Start</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-1 flex-grow">Instructor: David Bombal</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Issued: May 2025</p>
+          <a href="https://www.udemy.com/certificate/UC-08bd8bbf-0480-4106-8b79-8ffabe5029ed/" target="_blank"
+            class="text-indigo-500 dark:text-indigo-300 font-medium hover:underline inline-flex items-center">
+            View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+          </a>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">
+            Django Masterclass: Build 9 Real World Django Projects
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-1 flex-grow">
+            Instructor: Ashutosh Pawar
+          </p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">
+            Issued: Jun 2025
+          </p>
+          <a href="https://www.udemy.com/certificate/UC-4e5b939c-ba64-4345-8860-758870a08185/" target="_blank"
+            class="text-indigo-500 dark:text-indigo-300 font-medium hover:underline inline-flex items-center">
+            View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+          </a>
+        </div>
+        <div
+          class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">DevOps Certification</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-1 flex-grow">Provider: Manara</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Issued: Dec 2024</p>
+          <span class="text-gray-400 dark:text-gray-500 italic">Link not available</span>
+        </div>
+
       </div>
-
-      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-        <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">Flutter & Dart - The Complete Guide [2025 Edition]</h3>
-        <p class="text-sm text-gray-600 dark:text-gray-300 mb-1 flex-grow">Instructor: Maximilian Schwarzmüller (Academind)</p>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Issued: Jan 2025</p>
-        <a href="https://www.udemy.com/certificate/UC-31ddb86d-f115-492d-8a24-86dac9312e1d/" target="_blank" class="text-indigo-500 dark:text-indigo-300 font-medium hover:underline inline-flex items-center">
-          View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
-        </a>
-      </div>
-
-      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-        <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">The Complete Flutter Development Bootcamp with Dart</h3>
-        <p class="text-sm text-gray-600 dark:text-gray-300 mb-1 flex-grow">Instructor: Dr. Angela Yu</p>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Issued: Oct 2024</p>
-        <a href="https://www.udemy.com/certificate/UC-56ab915b-b2ae-4b1d-ae15-ef5bf87344bf/" target="_blank" class="text-indigo-500 dark:text-indigo-300 font-medium hover:underline inline-flex items-center">
-          View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
-        </a>
-      </div>
-
-      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-        <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">Cisco DCAIE – AI Solutions on Cisco Infrastructure Essentials</h3>
-        <p class="text-sm text-gray-600 dark:text-gray-300 mb-1 flex-grow">Covers AI deployment & data center design with Cisco infrastructure.</p>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Issued: Apr 2025</p>
-        <span class="text-gray-400 dark:text-gray-500 italic">Link not available</span>
-      </div>
-
-      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-        <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">The Complete Networking Fundamentals Course – Your CCNA Start</h3>
-        <p class="text-sm text-gray-600 dark:text-gray-300 mb-1 flex-grow">Instructor: David Bombal</p>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Issued: May 2025</p>
-        <a href="https://www.udemy.com/certificate/UC-08bd8bbf-0480-4106-8b79-8ffabe5029ed/" target="_blank" class="text-indigo-500 dark:text-indigo-300 font-medium hover:underline inline-flex items-center">
-          View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
-        </a>
-      </div>
-
-      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-        <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">DevOps Certification</h3>
-        <p class="text-sm text-gray-600 dark:text-gray-300 mb-1 flex-grow">Provider: Manara</p>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Issued: Dec 2024</p>
-        <span class="text-gray-400 dark:text-gray-500 italic">Link not available</span>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
 
-  <section  id="contact" class="py-16 bg-white dark:bg-gray-900">
+  <section id="contact" class="py-16 bg-white dark:bg-gray-900">
     <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
       📈 GitHub Stats
     </h2>
@@ -576,7 +722,6 @@
     </div>
   </section>
 
-  ---
 
   <footer>
     <div class="py-16 bg-gray-100 dark:bg-gray-800 text-center">
@@ -606,6 +751,15 @@
       <p>© 2025 Mustafa Taha - All rights reserved.</p>
     </footer>
   </footer>
+
+ <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden">
+  <div class="relative max-w-4xl max-h-full mx-auto p-4">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-3xl font-bold p-2 leading-none focus:outline-none z-50">
+      &times;
+    </button>
+    <img id="modalImage" src="" alt="Full screen image" class="max-w-full max-h-[90vh] object-contain cursor-zoom-out" />
+  </div>
+</div>
 
 
 
