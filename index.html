@@ -103,136 +103,149 @@
 
 
 
-  <section id="projects" class="py-16 bg-white dark:bg-gray-900">
-    <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
+   <div class="text-center py-8 bg-primary-light dark:bg-primary-dark">
+    <a href="cv/CV_imp_.pdf"
+          class="inline-flex items-center px-10 py-4 bg-indigo-600 text-white text-xl font-semibold rounded-full shadow-lg hover:bg-indigo-700 transform hover:scale-105 transition-all duration-300"  download="Mustafa_CV.pdf">
+          <i class="fas fa-download mr-3"></i> Download My CV
+        </a>
+  </div>
+
+
+<section id="projects" class="py-20 bg-gradient-to-br from-white to-gray-100 dark:from-gray-900 dark:to-gray-800">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-extrabold text-center text-gray-900 dark:text-white mb-16">
       🚀 Projects
     </h2>
 
-    <div class="container mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
-
-        <div
-          class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
-          <img src="img/book2.png" alt="ReadEase" class="w-full h-64 object-cover" />
-          <div class="p-6 flex flex-col flex-grow">
-            <h5 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-              <a href="https://github.com/mustafataha5/New_Book_store" target="_blank"
-                class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">ReadEase</a>
-            </h5>
-            <p class="text-gray-700 dark:text-gray-300 mb-4 flex-grow">
-              An online bookstore built with Django and AJAX, offering book search, reviews, and user management.
-            </p>
-            <p class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
-              <strong>Key Features:</strong>
-            </p>
-            <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 mb-4">
-              <li>Book search and filtering</li>
-              <li>User profiles and reviews</li>
-              <li>AJAX-powered dynamic interface</li>
-            </ul>
-            <p class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
-              <strong>Security:</strong>
-            </p>
-            <ul class="list-disc list-inside text-gray-600 dark:text-gray-400">
-              <li>Secure authentication with hashed passwords</li>
-              <li>Role-based access for admins</li>
-            </ul>
-          </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      
+      <!-- Project Card -->
+      <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden">
+        <img src="./img/ai_recommandtion.png" alt="Smart E-Commerce AI Recommender" class="w-full h-60 object-cover transition-transform duration-300 hover:scale-105" />
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">
+            <a href="https://github.com/mustafataha5/smart-ecommerce-ai-recommender" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Smart E-Commerce AI Recommender</a>
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4 text-base flex-grow">
+            An AI-driven system for e-commerce, offering intelligent product suggestions, user insights, and sales forecasting via a Flask API.
+          </p>
+          <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 mb-4">
+            <li>🔍 <strong>Association Rules:</strong> Discover product relationships</li>
+            <li>🎯 <strong>ML Classification:</strong> Personalized recommendations</li>
+            <li>📊 <strong>Time Series:</strong> Future sales predictions</li>
+            <li>🧠 <strong>RESTful API:</strong> Flask-powered model exposure</li>
+          </ul>
+          <p class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide mt-auto">Tech Stack:</p>
+          <p class="text-sm text-gray-700 dark:text-gray-300">
+            <strong>Core:</strong> Python, Pandas, Scikit-learn, MLxtend<br>
+            <strong>Backend:</strong> Flask<br>
+            <strong>Database:</strong> MySQL
+          </p>
         </div>
-
-        <div
-          class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
-          <img src="img/palrent.png" alt="PalRent" class="w-full h-64 object-cover" />
-          <div class="p-6 flex flex-col flex-grow">
-            <h5 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-              <a href="https://github.com/mustafataha5/palrent" target="_blank"
-                class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">PalRent</a>
-            </h5>
-            <p class="text-gray-700 dark:text-gray-300 mb-4 flex-grow">
-              A secure apartment reservation system using Spring Boot, offering real-time availability and booking
-              management.
-            </p>
-            <p class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
-              <strong>Key Features:</strong>
-            </p>
-            <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 mb-4">
-              <li>Apartment search with filters</li>
-              <li>Admin dashboard for property management</li>
-              <li>Real-time availability updates</li>
-            </ul>
-            <p class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
-              <strong>Security:</strong>
-            </p>
-            <ul class="list-disc list-inside text-gray-600 dark:text-gray-400">
-              <li>JWT-based authentication</li>
-              <li>Role-based access for admins</li>
-            </ul>
-          </div>
-        </div>
-
-        <div
-          class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
-          <img src="img/linkup.png" alt="LinkUp" class="w-full h-64 object-cover" />
-          <div class="p-6 flex flex-col flex-grow">
-            <h5 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-              <a href="https://github.com/mustafataha5/LinkUp" target="_blank"
-                class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">LinkUp</a>
-            </h5>
-            <p class="text-gray-700 dark:text-gray-300 mb-4 flex-grow">
-              A social media platform built with the MERN stack, enabling real-time user interactions like posts and
-              notifications.
-            </p>
-            <p class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
-              <strong>Key Features:</strong>
-            </p>
-            <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 mb-4">
-              <li>Post creation and multimedia support</li>
-              <li>Real-time notifications with Socket.io</li>
-              <li>Follow functionality with instant updates</li>
-            </ul>
-            <p class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
-              <strong>Security:</strong>
-            </p>
-            <ul class="list-disc list-inside text-gray-600 dark:text-gray-400">
-              <li>JWT authentication for secure logins</li>
-              <li>Input sanitization to prevent XSS attacks</li>
-            </ul>
-          </div>
-        </div>
-
-        <div
-          class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
-          <img src="img/order.png" alt="E-Commerce" class="w-full h-64 object-cover" />
-          <div class="p-6 flex flex-col flex-grow">
-            <h5 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-              <a href="https://github.com/mustafataha5/e-commerce/" target="_blank"
-                class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">E-Commerce</a>
-            </h5>
-            <p class="text-gray-700 dark:text-gray-300 mb-4 flex-grow">
-              A shopping platform using React, Node.js, MongoDB, and Flutter, providing real-time updates and secure
-              transactions.
-            </p>
-            <p class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
-              <strong>Key Features:</strong>
-            </p>
-            <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 mb-4">
-              <li>Product Browse and cart management</li>
-              <li>Order tracking and stock updates</li>
-              <li>Admin panel for product and order management</li>
-            </ul>
-            <p class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
-              <strong>Security:</strong>
-            </p>
-            <ul class="list-disc list-inside text-gray-600 dark:text-gray-400">
-              <li>Secure login with JWT tokens</li>
-              <li>Role-based access for admins</li>
-            </ul>
-          </div>
-        </div>
-
       </div>
+
+      <!-- ReadEase -->
+      <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden">
+        <img src="img/book2.png" alt="ReadEase Online Bookstore" class="w-full h-60 object-cover transition-transform duration-300 hover:scale-105" />
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">
+            <a href="https://github.com/mustafataha5/New_Book_store" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">ReadEase</a>
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4 text-base flex-grow">
+            A secure online bookstore built with Django and AJAX, featuring robust search, user reviews, and admin controls.
+          </p>
+          <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 mb-4">
+            <li>🔎 <strong>Book Search:</strong> Advanced filtering options</li>
+            <li>👤 <strong>User Management:</strong> Profiles, reviews, and authentication</li>
+            <li>⚡ <strong>Dynamic UI:</strong> AJAX for seamless interactions</li>
+          </ul>
+          <p class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide mt-auto">Tech Stack:</p>
+          <p class="text-sm text-gray-700 dark:text-gray-300">
+            <strong>Framework:</strong> Django<br>
+            <strong>Frontend:</strong> HTML, CSS, JavaScript (AJAX)<br>
+            <strong>Database:</strong> SQLite<br>
+            <strong>Deployment:</strong> AWS EC2
+          </p>
+        </div>
+      </div>
+
+      <!-- PalRent -->
+      <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden">
+        <img src="img/palrent.png" alt="PalRent Apartment Reservation System" class="w-full h-60 object-cover transition-transform duration-300 hover:scale-105" />
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">
+            <a href="https://github.com/mustafataha5/palrent" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">PalRent</a>
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4 text-base flex-grow">
+            A secure apartment reservation system built with Spring Boot, offering real-time availability and comprehensive booking management.
+          </p>
+          <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 mb-4">
+            <li>🏘️ <strong>Apartment Search:</strong> Filtered listings</li>
+            <li>🛡️ <strong>Security:</strong> JWT authentication & role-based access</li>
+            <li>📅 <strong>Real-time:</strong> Availability updates & booking</li>
+          </ul>
+          <p class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide mt-auto">Tech Stack:</p>
+          <p class="text-sm text-gray-700 dark:text-gray-300">
+            <strong>Backend:</strong> Spring Boot, Java<br>
+            <strong>Security:</strong> JWT<br>
+            <strong>Database:</strong> MySQL<br>
+            <strong>Deployment:</strong> AWS EC2
+          </p>
+        </div>
+      </div>
+
+      <!-- LinkUp -->
+      <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden">
+        <img src="img/linkup.png" alt="LinkUp Social Media Platform" class="w-full h-60 object-cover transition-transform duration-300 hover:scale-105" />
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">
+            <a href="https://github.com/mustafataha5/LinkUp" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">LinkUp</a>
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4 text-base flex-grow">
+            A dynamic social media platform using the MERN stack, featuring real-time interactions, posts, and notifications.
+          </p>
+          <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 mb-4">
+            <li>📢 <strong>Real-time:</strong> Notifications & updates with Socket.io</li>
+            <li>📷 <strong>Content:</strong> Post creation & multimedia support</li>
+            <li>🔐 <strong>Security:</strong> JWT authentication & input sanitization</li>
+          </ul>
+          <p class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide mt-auto">Tech Stack:</p>
+          <p class="text-sm text-gray-700 dark:text-gray-300">
+            <strong>MERN:</strong> MongoDB, Express.js, React.js, Node.js<br>
+            <strong>Real-time:</strong> Socket.io<br>
+            <strong>Deployment:</strong> AWS EC2
+          </p>
+        </div>
+      </div>
+
+      <!-- E-Commerce -->
+      <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden">
+        <img src="img/order.png" alt="E-Commerce Platform" class="w-full h-60 object-cover transition-transform duration-300 hover:scale-105" />
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">
+            <a href="https://github.com/mustafataha5/e-commerce/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">E-Commerce</a>
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4 text-base flex-grow">
+            A comprehensive shopping platform built with React, Node.js, MongoDB, and Flutter, enabling secure transactions and real-time updates.
+          </p>
+          <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 mb-4">
+            <li>🛒 <strong>Shopping Features:</strong> Cart, product, and order management</li>
+            <li>📦 <strong>Tracking:</strong> Real-time order & stock updates</li>
+            <li>👨‍💼 <strong>Admin Panel:</strong> Product & user administration</li>
+          </ul>
+          <p class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide mt-auto">Tech Stack:</p>
+          <p class="text-sm text-gray-700 dark:text-gray-300">
+            <strong>Frontend:</strong> React.js, Flutter<br>
+            <strong>Backend:</strong> Node.js, Express.js<br>
+            <strong>Database:</strong> MongoDB<br>
+            <strong>Deployment:</strong> AWS EC2
+          </p>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
 
 <section id="visual-showcase-section" class="py-16 bg-white dark:bg-gray-900">

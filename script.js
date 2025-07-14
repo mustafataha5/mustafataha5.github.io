@@ -1,4 +1,4 @@
-let i_am_arr = ["Full Stack Developer.", "Flutter Developer.", "Web And Mobile App Developer.", "DevOps"];
+let i_am_arr = ["Full Stack Developer.", "AI Engineer", "Web And Mobile App Developer.", "DevOps"];
 let len = i_am_arr.length;
 let count = 0;
 let count_t = 0;
