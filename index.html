@@ -1,792 +1,631 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Mustafa Taha - Full Stack Developer, projects using Django, MERN, Spring Boot, Flutter" />
-  <meta name="keywords"
-    content="Mustafa Taha, developer, programming, Full Stack Developer, Django, MERN, Flutter, Spring Boot" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mustafa Taha portfolio: Data Analyst, AI Engineer, and Full-Stack Developer building data, machine learning, web, and mobile solutions." />
+  <meta name="keywords" content="Mustafa Taha, Data Analyst, AI Engineer, Full Stack Developer, Python, SQL, Power BI, TensorFlow, PyTorch, React, Spring Boot, Django, MERN" />
+  <meta name="author" content="Mustafa Taha" />
+  <meta property="og:title" content="Mustafa Taha | Data Analyst & AI Engineer" />
+  <meta property="og:description" content="Portfolio of Mustafa Taha: AI, data analytics, full-stack, and mobile projects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mustafataha5.github.io" />
 
-  <title>Mustafa Taha - Full Stack Developer</title>
+  <title>Mustafa Taha | Data Analyst & AI Engineer</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class', // This tells Tailwind to use the 'dark' class for dark mode
+      darkMode: 'class',
       theme: {
         extend: {
-          // You can put any custom theme extensions here if needed
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca'
+            }
+          }
         }
       }
-    }
+    };
   </script>
-
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <script>
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-
-      document.documentElement.classList.add('dark')
+      document.documentElement.classList.add('dark');
     } else {
-
-      document.documentElement.classList.remove('dark')
+      document.documentElement.classList.remove('dark');
     }
   </script>
-
 </head>
 
-<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white font-sans">
-  <nav class="sticky top-0 z-50 w-full bg-gray-100 dark:bg-gray-800 shadow-md py-4">
-    <div class="container mx-auto px-6 flex justify-between items-center">
-      <a href="#header" class="text-2xl font-bold text-gray-900 dark:text-white">
-        Mustafa Taha
-      </a>
-      <div class="hidden md:flex space-x-8">
-        <a href="#projects"
-          class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Projects</a>
-        <a href="#skill"
-          class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Skills</a>
-        <a href="#certificates"
-          class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Certificates</a>
-        <a href="#contact"
-          class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium">Contact</a>
+<body class="bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-white">
+  <nav class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
+      <a href="#home" class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">Mustafa Taha</a>
+
+      <div class="hidden items-center gap-7 md:flex">
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#certifications" class="nav-link">Certificates</a>
+        <a href="#github" class="nav-link">GitHub</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </div>
 
-      <div class="flex items-center space-x-4">
-        <button id="darkModeToggle"
-          class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200 focus:outline-none">
-          <i class="fas fa-sun hidden dark:inline-block"></i>
-          <i class="fas fa-moon inline-block dark:hidden"></i>
+      <div class="flex items-center gap-3">
+        <button id="darkModeToggle" type="button" aria-label="Toggle dark mode" class="rounded-full border border-slate-200 p-2 text-slate-700 transition hover:bg-slate-100 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800">
+          <i class="fa-solid fa-moon dark:hidden"></i>
+          <i class="fa-solid fa-sun hidden dark:inline-block"></i>
         </button>
-        <button id="mobileMenuButton"
-          class="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none">
-          <i class="fas fa-bars text-xl"></i>
+        <button id="mobileMenuButton" type="button" aria-label="Open mobile menu" class="rounded-lg p-2 text-slate-700 hover:bg-slate-100 md:hidden dark:text-slate-200 dark:hover:bg-slate-800">
+          <i class="fa-solid fa-bars text-xl"></i>
         </button>
       </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white px-5 py-4 dark:border-slate-800 dark:bg-slate-950 md:hidden">
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#certifications" class="mobile-link">Certificates</a>
+      <a href="#github" class="mobile-link">GitHub</a>
+      <a href="#contact" class="mobile-link">Contact</a>
     </div>
   </nav>
-  <header id="header" class="relative bg-gray-100 dark:bg-gray-800 shadow-lg pb-16">
 
-
-    <div id="mobileMenu"
-      class="md:hidden bg-white dark:bg-gray-800 shadow-lg py-4 transition-all duration-300 ease-in-out hidden absolute w-full z-10">
-      <a href="#projects"
-        class="block px-6 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 text-lg font-medium">Projects</a>
-      <a href="#skill"
-        class="block px-6 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 text-lg font-medium">Skills</a>
-      <a href="#certificates"
-        class="block px-6 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 text-lg font-medium">Certificates</a>
-      <a href="#contact"
-        class="block px-6 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 text-lg font-medium">Contact</a>
+  <header id="home" class="relative overflow-hidden bg-gradient-to-br from-brand-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <div class="absolute inset-0 -z-10 opacity-40 dark:opacity-20">
+      <div class="absolute left-10 top-20 h-72 w-72 rounded-full bg-brand-500 blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 h-72 w-72 rounded-full bg-sky-400 blur-3xl"></div>
     </div>
 
-    <div class="text-center py-16">
-      <h1 class="text-5xl font-extrabold text-gray-900 dark:text-white mb-4 leading-tight">
-        Hi, I'm Mustafa Taha
-      </h1>
-      <h3 class="text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-6">
-        I'm <span id="home_i_am" class="text-indigo-600 dark:text-indigo-400 font-bold"></span>
-      </h3>
-      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 px-4">
-        I build functional, scalable applications with a focus on performance, security, and usability.
-      </p>
-      <div class="flex justify-center">
-        <img src="https://user-images.githubusercontent.com/74038190/212749168-86d6c7ab-98da-409b-998f-c5b74721badd.gif"
-          alt="Profile Image"
-          class="rounded-full shadow-xl border-4 border-indigo-500 dark:border-indigo-400 w-48 h-48 object-cover" />
+    <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-20 lg:grid-cols-2 lg:py-28">
+      <div>
+        <p class="mb-4 inline-flex rounded-full border border-brand-200 bg-white px-4 py-2 text-sm font-semibold text-brand-700 shadow-sm dark:border-brand-700/50 dark:bg-slate-900 dark:text-brand-300">
+          Data Analyst • AI Engineer • Full-Stack Developer
+        </p>
+        <h1 class="mb-5 text-4xl font-black tracking-tight text-slate-950 dark:text-white sm:text-5xl lg:text-6xl">
+          Hi, I'm Mustafa Taha
+        </h1>
+        <h2 class="mb-6 text-2xl font-bold text-slate-700 dark:text-slate-300">
+          I build <span id="home_i_am" class="text-brand-600 dark:text-brand-400"></span>
+        </h2>
+        <p class="mb-8 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+          I turn data into actionable insights and build intelligent, scalable products using Python, SQL, TensorFlow, PyTorch, React, Django, Spring Boot, and cloud deployment tools.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="#projects" class="btn-primary"><i class="fa-solid fa-rocket mr-2"></i>View Projects</a>
+          <a href="cv/CV_official_mustafa.pdf" download="Mustafa_Taha_CV.pdf" class="btn-secondary"><i class="fa-solid fa-download mr-2"></i>Download CV</a>
+          <a href="https://github.com/mustafataha5" target="_blank" rel="noopener noreferrer" class="btn-secondary"><i class="fa-brands fa-github mr-2"></i>GitHub</a>
+        </div>
+      </div>
+
+      <div class="flex justify-center lg:justify-end">
+        <div class="relative">
+          <div class="absolute inset-0 rounded-full bg-brand-500 blur-2xl opacity-30"></div>
+          <img src="https://user-images.githubusercontent.com/74038190/212749168-86d6c7ab-98da-409b-998f-c5b74721badd.gif" alt="Developer animation" class="relative h-72 w-72 rounded-full border-4 border-white object-cover shadow-2xl dark:border-slate-800 sm:h-80 sm:w-80" />
+        </div>
       </div>
     </div>
   </header>
 
+  <main>
+    <section class="bg-white py-12 dark:bg-slate-950">
+      <div class="mx-auto grid max-w-7xl gap-5 px-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="stat-card"><span>10+</span><p>ML & data projects</p></div>
+        <div class="stat-card"><span>5+</span><p>Full-stack apps</p></div>
+        <div class="stat-card"><span>3</span><p>Udacity/Coursera data certificates</p></div>
+        <div class="stat-card"><span>AWS</span><p>Cloud deployment experience</p></div>
+      </div>
+    </section>
 
+    <section id="projects" class="section bg-slate-50 dark:bg-slate-900">
+      <div class="section-header">
+        <p class="section-kicker">Portfolio</p>
+        <h2>Featured Projects</h2>
+        <p>Selected AI, analytics, full-stack, and mobile projects with business-focused outcomes.</p>
+      </div>
 
-  <div class="text-center py-8 bg-primary-light dark:bg-primary-dark">
-    <a href="cv/CV_official_mustafa.pdf"
-      class="inline-flex items-center px-10 py-4 bg-indigo-600 text-white text-xl font-semibold rounded-full shadow-lg hover:bg-indigo-700 transform hover:scale-105 transition-all duration-300"
-      download="Mustafa_CV.pdf">
-      <i class="fas fa-download mr-3"></i> Download My CV
-    </a>
+      <div class="mx-auto grid max-w-7xl gap-8 px-5 md:grid-cols-2 lg:grid-cols-3">
+        <article class="project-card">
+          <img src="./img/ai_recommandtion.png" alt="Smart E-Commerce AI Recommender" />
+          <div class="project-body">
+            <div class="flex items-start justify-between gap-3">
+              <h3>Smart E-Commerce AI Recommender</h3>
+              <a href="https://github.com/mustafataha5/smart-ecommerce-ai-recommender" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Open Smart E-Commerce AI Recommender on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <p>Hybrid recommender using association rules and machine learning, exposed through a Flask API and MySQL backend.</p>
+            <div class="tags"><span>Python</span><span>Flask</span><span>Scikit-learn</span><span>MySQL</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="img/traffic.png" alt="Traffic Monitoring System" />
+          <div class="project-body">
+            <h3>Traffic Monitoring System</h3>
+            <p>Real-time vehicle detection and license plate OCR pipeline for surveillance, logging, and dashboard integration.</p>
+            <div class="tags"><span>Python</span><span>OpenCV</span><span>YOLO</span><span>TensorFlow</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="img/book2.png" alt="ReadEase Online Bookstore" />
+          <div class="project-body">
+            <div class="flex items-start justify-between gap-3">
+              <h3>ReadEase</h3>
+              <a href="https://github.com/mustafataha5/New_Book_store" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Open ReadEase on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <p>Secure Django bookstore with AJAX interactions, search, reviews, authentication, and admin controls.</p>
+            <div class="tags"><span>Django</span><span>AJAX</span><span>SQLite</span><span>AWS EC2</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="img/palrent.png" alt="PalRent Apartment Reservation System" />
+          <div class="project-body">
+            <div class="flex items-start justify-between gap-3">
+              <h3>PalRent</h3>
+              <a href="https://github.com/mustafataha5/palrent" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Open PalRent on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <p>Apartment booking platform with Spring Security, role-based access, property listings, and admin dashboards.</p>
+            <div class="tags"><span>Spring Boot</span><span>Java</span><span>MySQL</span><span>Security</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="img/linkup.png" alt="LinkUp Social Media Platform" />
+          <div class="project-body">
+            <div class="flex items-start justify-between gap-3">
+              <h3>LinkUp</h3>
+              <a href="https://github.com/mustafataha5/LinkUp" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Open LinkUp on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <p>MERN social media app with posts, follows, real-time messaging, notifications, and JWT authentication.</p>
+            <div class="tags"><span>MERN</span><span>Socket.IO</span><span>JWT</span><span>AWS EC2</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="img/order.png" alt="E-Commerce Platform" />
+          <div class="project-body">
+            <div class="flex items-start justify-between gap-3">
+              <h3>E-Commerce Platform</h3>
+              <a href="https://github.com/mustafataha5/e-commerce/" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Open E-Commerce project on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <p>Shopping platform with React, Node.js, MongoDB, Flutter client, admin panel, orders, and stock workflows.</p>
+            <div class="tags"><span>React</span><span>Node.js</span><span>MongoDB</span><span>Flutter</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+   <section id="visual-showcase" class="py-20 bg-white dark:bg-slate-950">
+  <div class="mx-auto mb-12 max-w-3xl px-5 text-center">
+    <p class="mb-3 text-sm font-black uppercase tracking-[0.25em] text-indigo-600 dark:text-indigo-400">
+      Screenshots
+    </p>
+
+    <h2 class="text-4xl font-black tracking-tight text-slate-950 dark:text-white sm:text-5xl">
+      Visual Showcase
+    </h2>
+
+    <p class="mt-4 text-lg leading-8 text-slate-600 dark:text-slate-300">
+      Project screens for dashboards, charts, orders, authentication, and e-commerce workflows.
+    </p>
   </div>
 
+  <div
+    id="imageSlider"
+    class="relative mx-auto max-w-5xl overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 shadow-2xl dark:border-slate-800 dark:bg-slate-900"
+  >
+    <div id="slidesContainer" class="flex transition-transform duration-500 ease-in-out">
 
-  <section id="projects" class="py-20 bg-gradient-to-br from-white to-gray-100 dark:from-gray-900 dark:to-gray-800">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-extrabold text-center text-gray-900 dark:text-white mb-16">
-        🚀 Projects
-      </h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-        <!-- Project Card -->
-        <div
-          class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden">
-          <img src="./img/ai_recommandtion.png" alt="Smart E-Commerce AI Recommender"
-            class="w-full h-60 object-cover transition-transform duration-300 hover:scale-105" />
-          <div class="p-6 flex flex-col flex-grow">
-            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">
-              <a href="https://github.com/mustafataha5/smart-ecommerce-ai-recommender" target="_blank"
-                rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Smart
-                E-Commerce AI Recommender</a>
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4 text-base flex-grow">
-              An AI-driven system for e-commerce, offering intelligent product suggestions, user insights, and sales
-              forecasting via a Flask API.
-            </p>
-            <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 mb-4">
-              <li>🔍 <strong>Association Rules:</strong> Discover product relationships</li>
-              <li>🎯 <strong>ML Classification:</strong> Personalized recommendations</li>
-              <li>📊 <strong>Time Series:</strong> Future sales predictions</li>
-              <li>🧠 <strong>RESTful API:</strong> Flask-powered model exposure</li>
-            </ul>
-            <p class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide mt-auto">Tech Stack:</p>
-            <p class="text-sm text-gray-700 dark:text-gray-300">
-              <strong>Core:</strong> Python, Pandas, Scikit-learn, MLxtend<br>
-              <strong>Backend:</strong> Flask<br>
-              <strong>Database:</strong> MySQL
-            </p>
-          </div>
-        </div>
-
-        <!-- Traffic Monitoring System – Car Detection & OCR -->
-        <div
-          class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden">
-          <img src="img/traffic.png" alt="Traffic Monitoring System – Car Detection & OCR"
-            class="w-full h-60 object-cover transition-transform duration-300 hover:scale-105" />
-          <div class="p-6 flex flex-col flex-grow">
-            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">
-              Traffic Monitoring System – Car Detection & OCR
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4 text-base flex-grow">
-              Developed a real-time traffic monitoring system for detecting vehicles and license plates with high
-              accuracy, optimized for live surveillance and automated data logging.
-            </p>
-            <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 mb-4">
-              <li>🚗 <strong>Vehicle Detection:</strong> Real-time recognition of cars</li>
-              <li>🔢 <strong>License Plate OCR:</strong> Automated extraction and logging</li>
-              <li>📊 <strong>Dashboard Integration:</strong> Seamless monitoring and data visualization</li>
-              <li>⚡ <strong>Optimized Pipeline:</strong> Fast processing for live surveillance</li>
-            </ul>
-            <p class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide mt-auto">Tech Stack:</p>
-            <p class="text-sm text-gray-700 dark:text-gray-300">
-              <strong>Languages:</strong> Python<br>
-              <strong>Libraries:</strong> OpenCV, TensorFlow, YOLO<br>
-              <strong>Deployment:</strong> Private / Internal Use
-            </p>
-          </div>
-        </div>
-        <!-- ReadEase -->
-        <div
-          class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden">
-          <img src="img/book2.png" alt="ReadEase Online Bookstore"
-            class="w-full h-60 object-cover transition-transform duration-300 hover:scale-105" />
-          <div class="p-6 flex flex-col flex-grow">
-            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">
-              <a href="https://github.com/mustafataha5/New_Book_store" target="_blank" rel="noopener noreferrer"
-                class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">ReadEase</a>
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4 text-base flex-grow">
-              A secure online bookstore built with Django and AJAX, featuring robust search, user reviews, and admin
-              controls.
-            </p>
-            <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 mb-4">
-              <li>🔎 <strong>Book Search:</strong> Advanced filtering options</li>
-              <li>👤 <strong>User Management:</strong> Profiles, reviews, and authentication</li>
-              <li>⚡ <strong>Dynamic UI:</strong> AJAX for seamless interactions</li>
-            </ul>
-            <p class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide mt-auto">Tech Stack:</p>
-            <p class="text-sm text-gray-700 dark:text-gray-300">
-              <strong>Framework:</strong> Django<br>
-              <strong>Frontend:</strong> HTML, CSS, JavaScript (AJAX)<br>
-              <strong>Database:</strong> SQLite<br>
-              <strong>Deployment:</strong> AWS EC2
-            </p>
-          </div>
-        </div>
-
-        <!-- PalRent -->
-        <div
-          class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden">
-          <img src="img/palrent.png" alt="PalRent Apartment Reservation System"
-            class="w-full h-60 object-cover transition-transform duration-300 hover:scale-105" />
-          <div class="p-6 flex flex-col flex-grow">
-            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">
-              <a href="https://github.com/mustafataha5/palrent" target="_blank" rel="noopener noreferrer"
-                class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">PalRent</a>
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4 text-base flex-grow">
-              A secure apartment reservation system built with Spring Boot, offering real-time availability and
-              comprehensive booking management.
-            </p>
-            <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 mb-4">
-              <li>🏘️ <strong>Apartment Search:</strong> Filtered listings</li>
-              <li>🛡️ <strong>Security:</strong> JWT authentication & role-based access</li>
-              <li>📅 <strong>Real-time:</strong> Availability updates & booking</li>
-            </ul>
-            <p class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide mt-auto">Tech Stack:</p>
-            <p class="text-sm text-gray-700 dark:text-gray-300">
-              <strong>Backend:</strong> Spring Boot, Java<br>
-              <strong>Security:</strong> JWT<br>
-              <strong>Database:</strong> MySQL<br>
-              <strong>Deployment:</strong> AWS EC2
-            </p>
-          </div>
-        </div>
-
-        <!-- LinkUp -->
-        <div
-          class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden">
-          <img src="img/linkup.png" alt="LinkUp Social Media Platform"
-            class="w-full h-60 object-cover transition-transform duration-300 hover:scale-105" />
-          <div class="p-6 flex flex-col flex-grow">
-            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">
-              <a href="https://github.com/mustafataha5/LinkUp" target="_blank" rel="noopener noreferrer"
-                class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">LinkUp</a>
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4 text-base flex-grow">
-              A dynamic social media platform using the MERN stack, featuring real-time interactions, posts, and
-              notifications.
-            </p>
-            <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 mb-4">
-              <li>📢 <strong>Real-time:</strong> Notifications & updates with Socket.io</li>
-              <li>📷 <strong>Content:</strong> Post creation & multimedia support</li>
-              <li>🔐 <strong>Security:</strong> JWT authentication & input sanitization</li>
-            </ul>
-            <p class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide mt-auto">Tech Stack:</p>
-            <p class="text-sm text-gray-700 dark:text-gray-300">
-              <strong>MERN:</strong> MongoDB, Express.js, React.js, Node.js<br>
-              <strong>Real-time:</strong> Socket.io<br>
-              <strong>Deployment:</strong> AWS EC2
-            </p>
-          </div>
-        </div>
-
-        <!-- E-Commerce -->
-        <div
-          class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden">
-          <img src="img/order.png" alt="E-Commerce Platform"
-            class="w-full h-60 object-cover transition-transform duration-300 hover:scale-105" />
-          <div class="p-6 flex flex-col flex-grow">
-            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">
-              <a href="https://github.com/mustafataha5/e-commerce/" target="_blank" rel="noopener noreferrer"
-                class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">E-Commerce</a>
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4 text-base flex-grow">
-              A comprehensive shopping platform built with React, Node.js, MongoDB, and Flutter, enabling secure
-              transactions and real-time updates.
-            </p>
-            <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 mb-4">
-              <li>🛒 <strong>Shopping Features:</strong> Cart, product, and order management</li>
-              <li>📦 <strong>Tracking:</strong> Real-time order & stock updates</li>
-              <li>👨‍💼 <strong>Admin Panel:</strong> Product & user administration</li>
-            </ul>
-            <p class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide mt-auto">Tech Stack:</p>
-            <p class="text-sm text-gray-700 dark:text-gray-300">
-              <strong>Frontend:</strong> React.js, Flutter<br>
-              <strong>Backend:</strong> Node.js, Express.js<br>
-              <strong>Database:</strong> MongoDB<br>
-              <strong>Deployment:</strong> AWS EC2
-            </p>
-          </div>
-        </div>
-
+      <div class="w-full flex-shrink-0">
+        <img
+          src="img/imgs/cart.png"
+          alt="E-commerce shopping cart"
+          class="h-[28rem] w-full cursor-zoom-in bg-slate-200 object-contain dark:bg-slate-800"
+        />
+        <p class="bg-white px-4 py-5 text-center text-xl font-black tracking-wide text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+          Shopping Cart UI
+        </p>
       </div>
+
+      <div class="w-full flex-shrink-0">
+        <img
+          src="img/imgs/chart.js.png"
+          alt="Chart.js data visualization example"
+          class="h-[28rem] w-full cursor-zoom-in bg-slate-200 object-contain dark:bg-slate-800"
+        />
+        <p class="bg-white px-4 py-5 text-center text-xl font-black tracking-wide text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+          Chart.js Integration
+        </p>
+      </div>
+
+      <div class="w-full flex-shrink-0">
+        <img
+          src="img/imgs/dashboard.png"
+          alt="Admin dashboard layout"
+          class="h-[28rem] w-full cursor-zoom-in bg-slate-200 object-contain dark:bg-slate-800"
+        />
+        <p class="bg-white px-4 py-5 text-center text-xl font-black tracking-wide text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+          Admin Dashboard
+        </p>
+      </div>
+
+      <div class="w-full flex-shrink-0">
+        <img
+          src="img/imgs/orders.png"
+          alt="Orders list page"
+          class="h-[28rem] w-full cursor-zoom-in bg-slate-200 object-contain dark:bg-slate-800"
+        />
+        <p class="bg-white px-4 py-5 text-center text-xl font-black tracking-wide text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+          Orders Management
+        </p>
+      </div>
+
+      <div class="w-full flex-shrink-0">
+        <img
+          src="img/imgs/payment_success.png"
+          alt="Payment success confirmation"
+          class="h-[28rem] w-full cursor-zoom-in bg-slate-200 object-contain dark:bg-slate-800"
+        />
+        <p class="bg-white px-4 py-5 text-center text-xl font-black tracking-wide text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+          Payment Success
+        </p>
+      </div>
+
+      <div class="w-full flex-shrink-0">
+        <img
+          src="img/imgs/sales.png"
+          alt="Sales dashboard"
+          class="h-[28rem] w-full cursor-zoom-in bg-slate-200 object-contain dark:bg-slate-800"
+        />
+        <p class="bg-white px-4 py-5 text-center text-xl font-black tracking-wide text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+          Sales Dashboard
+        </p>
+      </div>
+
     </div>
-  </section>
+
+    <button
+      id="prevBtn"
+      type="button"
+      aria-label="Previous slide"
+      class="absolute left-4 top-[45%] z-10 -translate-y-1/2 rounded-full bg-slate-950/70 px-4 py-3 text-white shadow-lg transition hover:bg-slate-950"
+    >
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <button
+      id="nextBtn"
+      type="button"
+      aria-label="Next slide"
+      class="absolute right-4 top-[45%] z-10 -translate-y-1/2 rounded-full bg-slate-950/70 px-4 py-3 text-white shadow-lg transition hover:bg-slate-950"
+    >
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <!-- Dots are now outside the slider, under the image title -->
+  <div
+    id="dotsContainer"
+    class="mx-auto mt-6 flex justify-center gap-2"
+  ></div>
+</section>
 
 
-  <section id="visual-showcase-section" class="py-16 bg-white dark:bg-gray-900">
-    <div class="container mx-auto px-6 max-w-7xl">
-      <h2 class="text-4xl font-extrabold text-center text-gray-900 dark:text-white mb-12">Visual Showcase</h2>
-      <p class="text-xl text-center text-gray-700 dark:text-gray-300 mb-10">
-        A collection of screenshots showcasing various functionalities and user interfaces from my projects. Click on
-        any image to view it full screen.
+<section id="skill" class="relative overflow-hidden bg-slate-50 py-24 dark:bg-slate-950">
+
+  <!-- Background Effects -->
+  <div class="absolute left-0 top-0 h-72 w-72 rounded-full bg-indigo-500/10 blur-3xl"></div>
+  <div class="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl"></div>
+
+  <div class="relative mx-auto max-w-7xl px-6">
+
+    <!-- Header -->
+    <div class="mx-auto mb-20 max-w-3xl text-center">
+
+      <p class="mb-3 text-sm font-black uppercase tracking-[0.25em] text-indigo-600 dark:text-indigo-400">
+        Toolbox
       </p>
 
-      <div id="imageSlider" class="relative w-full max-w-4xl py-5 mx-auto overflow-hidden rounded-xl shadow-2xl">
-        <div id="slidesContainer" class="flex transition-transform duration-500 ease-in-out">
-          <div class="w-full flex-shrink-0">
-            <img src="img/imgs/cart.png" alt="E-commerce shopping cart"
-              class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
-            <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Shopping Cart UI</p>
-          </div>
-          <div class="w-full flex-shrink-0">
-            <img src="img/imgs/chart.js.png" alt="Chart.js data visualization example"
-              class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
-            <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Chart.js Integration</p>
-          </div>
-          <div class="w-full flex-shrink-0">
-            <img src="img/imgs/chartjs2.png" alt="Chart.js with multiple datasets"
-              class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
-            <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Advanced Chart View</p>
-          </div>
-          <div class="w-full flex-shrink-0">
-            <img src="img/imgs/chartjs3.png" alt="Chart.js dynamic chart with labels"
-              class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
-            <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Interactive Charts</p>
-          </div>
-          <div class="w-full flex-shrink-0">
-            <img src="img/imgs/charts.png" alt="Dashboard with various charts"
-              class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
-            <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Dashboard Charts</p>
-          </div>
-          <div class="w-full flex-shrink-0">
-            <img src="img/imgs/dashboard.png" alt="Admin dashboard layout"
-              class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
-            <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Digital Market Admin Dashboard</p>
-          </div>
-          <div class="w-full flex-shrink-0">
-            <img src="img/imgs/dashboard1.png" alt="User dashboard interface"
-              class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
-            <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">User Dashboard</p>
-          </div>
-          <div class="w-full flex-shrink-0">
-            <img src="img/imgs/expense.png" alt="Expense tracking interface"
-              class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
-            <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Expense Tracker UI</p>
-          </div>
+      <h2 class="text-4xl font-black tracking-tight text-slate-950 dark:text-white sm:text-5xl">
+        Tools & Technical Skills
+      </h2>
 
-          <div class="w-full flex-shrink-0">
-            <img src="img/imgs/order_Detail.png" alt="Order details screen"
-              class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
-            <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Order Details View</p>
-          </div>
-          <div class="w-full flex-shrink-0">
-            <img src="img/imgs/order_detail_dark.png" alt="Order details screen in dark mode"
-              class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
-            <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Order Details (Dark Mode)</p>
-          </div>
-          <div class="w-full flex-shrink-0">
-            <img src="img/imgs/order_detail_l.png" alt="Order details screen in light mode"
-              class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
-            <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Order Details (Light Mode)</p>
-          </div>
-          <div class="w-full flex-shrink-0">
-            <img src="img/imgs/orders.png" alt="Orders list page"
-              class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
-            <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Orders List Management</p>
-          </div>
-          <div class="w-full flex-shrink-0">
-            <img src="img/imgs/payment_success.png" alt="Payment success confirmation"
-              class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
-            <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Payment Success Screen</p>
-          </div>
-          <div class="w-full flex-shrink-0">
-            <img src="img/imgs/register.png" alt="User registration form"
-              class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
-            <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Registration Page</p>
-          </div>
-          <div class="w-full flex-shrink-0">
-            <img src="img/imgs/login.png" alt="User login screen"
-              class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
-            <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Login Page</p>
-          </div>
-          <div class="w-full flex-shrink-0">
-            <img src="img/imgs/sales.png" alt="Sales dashboard with statistics"
-              class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
-            <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Sales Dashboard Overview</p>
-          </div>
-          <div class="w-full flex-shrink-0">
-            <img src="img/imgs/sales2.png" alt="Sales trend analysis chart"
-              class="w-full h-96 object-contain bg-gray-200 dark:bg-gray-700" />
-            <p class="text-center text-gray-700 dark:text-gray-300 p-4 text-lg">Sales Trend Analysis</p>
-          </div>
-        </div>
-
-        <button id="prevBtn"
-          class="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white p-3 rounded-r-lg text-2xl z-10 hover:bg-opacity-90 transition-opacity focus:outline-none">
-          &#10094;
-        </button>
-        <button id="nextBtn"
-          class="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white p-3 rounded-l-lg text-2xl z-10 hover:bg-opacity-90 transition-opacity focus:outline-none">
-          &#10095;
-        </button>
-
-        <div id="dotsContainer" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
-        </div>
-      </div>
+      <p class="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
+        Technologies and platforms I use to build AI systems,
+        scalable applications, analytics dashboards, and cloud-ready solutions.
+      </p>
     </div>
-  </section>
 
+    <!-- Skills Grid -->
+    <div class="grid gap-8 lg:grid-cols-2">
 
-  <section id="skill" class="py-16 bg-gray-100 dark:bg-gray-800">
-    <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
-      🔧 Tools & Technical Skills
-    </h2>
+      <!-- AI & Data -->
+      <div class="rounded-3xl border border-slate-200 bg-white/90 p-8 shadow-xl backdrop-blur transition hover:-translate-y-1 hover:shadow-2xl dark:border-slate-800 dark:bg-slate-900/90">
 
-    <div class="container mx-auto px-6 space-y-12">
-      <div>
-        <h3 class="text-3xl font-semibold text-gray-800 dark:text-white mb-6">
-          Languages
-        </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Java</p>
+        <div class="mb-8 flex items-center gap-4">
+
+          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-100 text-2xl text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-400">
+            <i class="fa-solid fa-brain"></i>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">JavaScript (ES6)</p>
+
+          <div>
+            <h3 class="text-2xl font-black text-slate-950 dark:text-white">
+              Data Analytics & AI
+            </h3>
+
+            <p class="text-sm text-slate-500 dark:text-slate-400">
+              Machine learning, deep learning & analytics
+            </p>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Python</p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+
+          <!-- Python -->
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/python.png" alt="Python" class="skill-icon" />
+            <span class="skill-title">Python</span>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/c-programming.png" alt="C" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">C</p>
+
+          <!-- TensorFlow -->
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/tensorflow.png" alt="TensorFlow" class="skill-icon" />
+            <span class="skill-title">TensorFlow</span>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img width="50px"
-              src="https://user-images.githubusercontent.com/5421823/62779159-4cf76880-baaa-11e9-8318-e20a1aaa913a.png"
-              alt="Assembly" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Assembly (8086, PIC16)</p>
+
+          <!-- PyTorch -->
+          <div class="skill-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Pytorch_logo.png" alt="PyTorch" class="skill-icon" />
+            <span class="skill-title">PyTorch</span>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/dart.png" alt="Dart" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Dart</p>
+
+          <!-- SQL -->
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/sql.png" alt="SQL" class="skill-icon" />
+            <span class="skill-title">SQL</span>
           </div>
+
+          <!-- Power BI -->
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/power-bi.png" alt="Power BI" class="skill-icon" />
+            <span class="skill-title">Power BI</span>
+          </div>
+
+          <!-- Tableau -->
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/tableau-software.png" alt="Tableau" class="skill-icon" />
+            <span class="skill-title">Tableau</span>
+          </div>
+
+          <!-- OpenCV -->
+          <div class="skill-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/OpenCV_Logo_with_text_svg_version.svg" alt="OpenCV" class="skill-icon" />
+            <span class="skill-title">OpenCV</span>
+          </div>
+
+          <!-- HuggingFace -->
+          <div class="skill-card">
+            <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" class="skill-icon" />
+            <span class="skill-title">Hugging Face</span>
+          </div>
+
+          <!-- Azure -->
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/azure-1.png" alt="Azure ML" class="skill-icon" />
+            <span class="skill-title">Azure ML</span>
+          </div>
+
         </div>
       </div>
 
-      <div>
-        <h3 class="text-3xl font-semibold text-gray-800 dark:text-white mb-6">
-          Frontend
-        </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">HTML5</p>
+      <!-- Full Stack -->
+      <div class="rounded-3xl border border-slate-200 bg-white/90 p-8 shadow-xl backdrop-blur transition hover:-translate-y-1 hover:shadow-2xl dark:border-slate-800 dark:bg-slate-900/90">
+
+        <div class="mb-8 flex items-center gap-4">
+
+          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-100 text-2xl text-cyan-600 dark:bg-cyan-500/10 dark:text-cyan-400">
+            <i class="fa-solid fa-code"></i>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">CSS3</p>
+
+          <div>
+            <h3 class="text-2xl font-black text-slate-950 dark:text-white">
+              Full-Stack Development
+            </h3>
+
+            <p class="text-sm text-slate-500 dark:text-slate-400">
+              Frontend, backend & APIs
+            </p>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img width="50px" src="https://v5.getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png"
-              alt="Bootstrap 5" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Bootstrap 5</p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/react-native.png" alt="React" class="skill-icon" />
+            <span class="skill-title">React</span>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">React</p>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/javascript.png" alt="JavaScript" class="skill-icon" />
+            <span class="skill-title">JavaScript</span>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/material-ui.png" alt="Material UI" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Material UI</p>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/html-5.png" alt="HTML5" class="skill-icon" />
+            <span class="skill-title">HTML5</span>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/flutter.png" alt="Flutter" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Flutter</p>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/css3.png" alt="CSS3" class="skill-icon" />
+            <span class="skill-title">CSS3</span>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://cdnblog.webkul.com/blog/wp-content/uploads/2024/05/tailwindcss-1633184775.webp"
-              alt="Flutter" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Tailwind</p>
+
+          <div class="skill-card">
+            <img src="https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg" alt="Tailwind CSS" class="skill-icon" />
+            <span class="skill-title">Tailwind</span>
           </div>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/nodejs.png" alt="Node.js" class="skill-icon" />
+            <span class="skill-title">Node.js</span>
+          </div>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/spring-logo.png" alt="Spring Boot" class="skill-icon" />
+            <span class="skill-title">Spring Boot</span>
+          </div>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/django.png" alt="Django" class="skill-icon" />
+            <span class="skill-title">Django</span>
+          </div>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/flutter.png" alt="Flutter" class="skill-icon" />
+            <span class="skill-title">Flutter</span>
+          </div>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/material-ui.png" alt="Material UI" class="skill-icon" />
+            <span class="skill-title">Material UI</span>
+          </div>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/bootstrap.png" alt="Bootstrap" class="skill-icon" />
+            <span class="skill-title">Bootstrap</span>
+          </div>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/api-settings.png" alt="REST APIs" class="skill-icon" />
+            <span class="skill-title">REST APIs</span>
+          </div>
+
         </div>
       </div>
 
-      <div>
-        <h3 class="text-3xl font-semibold text-gray-800 dark:text-white mb-6">
-          Backend
-        </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/spring-logo.png" alt="Spring Boot" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Spring Boot</p>
+      <!-- Databases -->
+      <div class="rounded-3xl border border-slate-200 bg-white/90 p-8 shadow-xl backdrop-blur transition hover:-translate-y-1 hover:shadow-2xl dark:border-slate-800 dark:bg-slate-900/90">
+
+        <div class="mb-8 flex items-center gap-4">
+
+          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-100 text-2xl text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400">
+            <i class="fa-solid fa-database"></i>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/express-js.png" alt="Express" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Express</p>
+
+          <div>
+            <h3 class="text-2xl font-black text-slate-950 dark:text-white">
+              Databases
+            </h3>
+
+            <p class="text-sm text-slate-500 dark:text-slate-400">
+              Relational & NoSQL systems
+            </p>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Node.js</p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/microsoft-sql-server.png" alt="SQL Server" class="skill-icon" />
+            <span class="skill-title">SQL Server</span>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/flask.png" alt="Flask" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Flask</p>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/mysql-logo.png" alt="MySQL" class="skill-icon" />
+            <span class="skill-title">MySQL</span>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/django.png" alt="Django" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Django</p>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/postgreesql.png" alt="PostgreSQL" class="skill-icon" />
+            <span class="skill-title">PostgreSQL</span>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://quintagroup.com/cms/python/images/jinja2.png/jinja2.png" width="50px" alt="Jinja2"
-              class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Jinja2</p>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/mongodb.png" alt="MongoDB" class="skill-icon" />
+            <span class="skill-title">MongoDB</span>
           </div>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/firebase.png" alt="Firebase" class="skill-icon" />
+            <span class="skill-title">Firebase</span>
+          </div>
+
+          <div class="skill-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="SQLite" class="skill-icon" />
+            <span class="skill-title">SQLite</span>
+          </div>
+
         </div>
       </div>
 
-      <div>
-        <h3 class="text-3xl font-semibold text-gray-800 dark:text-white mb-6">
-          DevOps
-        </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/ansible.png" alt="Ansible" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Ansible</p>
+      <!-- Cloud & DevOps -->
+      <div class="rounded-3xl border border-slate-200 bg-white/90 p-8 shadow-xl backdrop-blur transition hover:-translate-y-1 hover:shadow-2xl dark:border-slate-800 dark:bg-slate-900/90">
+
+        <div class="mb-8 flex items-center gap-4">
+
+          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-100 text-2xl text-orange-600 dark:bg-orange-500/10 dark:text-orange-400">
+            <i class="fa-solid fa-cloud"></i>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/docker.png" alt="Docker" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Docker</p>
-          </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/openvpn.png" alt="OpenVPN" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">OpenVPN</p>
-          </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/jenkins.png" alt="Jenkins" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Jenkins</p>
-          </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img width="50px" src="https://framerusercontent.com/images/DpFlQxGUeuFQ4c035JgoDfQos.jpg"
-              alt="GitHub Actions" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">GitHub Actions</p>
-          </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img width="50px" src="https://www.marksei.com/wp-content/uploads/2019/01/oVirt-Logo.png" alt="Ovirt"
-              class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Ovirt</p>
+
+          <div>
+            <h3 class="text-2xl font-black text-slate-950 dark:text-white">
+              Cloud & DevOps
+            </h3>
+
+            <p class="text-sm text-slate-500 dark:text-slate-400">
+              Deployment, CI/CD & cloud platforms
+            </p>
           </div>
         </div>
-      </div>
 
-      <div>
-        <h3 class="text-3xl font-semibold text-gray-800 dark:text-white mb-6">
-          Databases
-        </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/mysql.png" alt="MySQL" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">MySQL</p>
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/amazon-web-services.png" alt="AWS" class="skill-icon" />
+            <span class="skill-title">AWS</span>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">MongoDB</p>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/azure-1.png" alt="Azure" class="skill-icon" />
+            <span class="skill-title">Azure</span>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img width="50px"
-              src="https://banner2.cleanpng.com/20180823/pbs/kisspng-sqlite-database-android-mysql-sqlite-logo-svg-vector-amp-png-transparent-vec-1713950547459.webp"
-              alt="SQLite" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">SQLite</p>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/docker.png" alt="Docker" class="skill-icon" />
+            <span class="skill-title">Docker</span>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/postgreesql.png" alt="Postgres" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Postgres</p>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/github.png" alt="GitHub" class="skill-icon" />
+            <span class="skill-title">GitHub</span>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/firebase.png" alt="Firebase" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Firebase</p>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/linux.png" alt="Linux" class="skill-icon" />
+            <span class="skill-title">Linux</span>
           </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img width="50px" src="https://www.tenfold-security.com/wp-content/uploads/LDAP.png" alt="LDAP"
-              class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">LDAP</p>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/jenkins.png" alt="Jenkins" class="skill-icon" />
+            <span class="skill-title">Jenkins</span>
           </div>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/git.png" alt="Git" class="skill-icon" />
+            <span class="skill-title">Git</span>
+          </div>
+
+          <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/github.png" alt="GitHub Actions" class="skill-icon" />
+            <span class="skill-title">GitHub Actions</span>
+          </div>
+
         </div>
-      </div>
-
-      <div>
-        <h3 class="text-3xl font-semibold text-gray-800 dark:text-white mb-6">
-          Other Tools
-        </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/firebase.png" alt="Firebase" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Firebase</p>
-          </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img width="50px" src="https://cdn.icon-icons.com/icons2/2407/PNG/512/aws_icon_146074.png" alt="AWS"
-              class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">AWS (EC2, S3)</p>
-          </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Git</p>
-          </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/github.png" alt="GitHub" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">GitHub</p>
-          </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img width="50px" src="https://www.w3schools.com/whatis/img_ajax.jpg" alt="AJAX" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">AJAX</p>
-          </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img width="50px"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Socket-io.svg/1200px-Socket-io.svg.png"
-              alt="Socket.io" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Socket.io</p>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <h3 class="text-3xl font-semibold text-gray-800 dark:text-white mb-6">
-          Operating Systems
-        </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/windows-10.png" alt="Windows" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Windows</p>
-          </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/ubuntu.png" alt="Ubuntu" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Ubuntu</p>
-          </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img width="50px"
-              src=" https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Fedora_icon_%282021%29.svg/2089px-Fedora_icon_%282021%29.svg.png"
-              alt="Fedora" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">Fedora</p>
-          </div>
-          <div
-            class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <img src="https://img.icons8.com/color/48/000000/centos.png" alt="CentOS" class="mb-2" />
-            <p class="font-medium text-gray-800 dark:text-white">CentOS</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<section id="certifications" class="py-20 bg-gray-50 dark:bg-gray-900">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-4xl sm:text-5xl font-extrabold text-center text-gray-900 dark:text-white mb-16 relative before:content-[''] before:absolute before:w-20 before:h-1 before:bg-indigo-500 before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:rounded-full">
-      My Certifications
-    </h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
-
-      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl flex flex-col h-full">
-        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">Deep Reinforcement Learning Course</h3>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mb-1"><strong>Provider:</strong> Hugging Face</p>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4"><strong>Issued:</strong> August 2025</p>
-        <a href="https://cdn-uploads.huggingface.co/production/uploads/noauth/5-nxPLPn9k8dYffl0flF7.webp" target="_blank" class="mt-auto inline-flex items-center text-indigo-600 dark:text-indigo-400 font-semibold hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">
-          View Certificate
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
-        </a>
-      </div>
-
-      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl flex flex-col h-full">
-        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">AI/ML Course with Real Graduation Project</h3>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mb-1"><strong>Provider:</strong> Hsoub Academy</p>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4"><strong>Issued:</strong> August 2025</p>
-        <a href="https://academy.hsoub.com/certificate/PPL5OG77EKFAR2GRNBE78V8A9.pdf" target="_blank" class="mt-auto inline-flex items-center text-indigo-600 dark:text-indigo-400 font-semibold hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">
-          View Certificate
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
-        </a>
-      </div>
-
-      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl flex flex-col h-full">
-        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">Django Masterclass: Build 9 Projects</h3>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mb-1"><strong>Provider:</strong> Udemy</p>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4"><strong>Issued:</strong> June 2025</p>
-        <a href="https://www.udemy.com/certificate/UC-4e5b939c-ba64-4345-8860-758870a08185/" target="_blank" class="mt-auto inline-flex items-center text-indigo-600 dark:text-indigo-400 font-semibold hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">
-          View Certificate
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
-        </a>
-      </div>
-
-      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl flex flex-col h-full">
-        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">The Complete Networking Fundamentals Course for CCNA</h3>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mb-1"><strong>Provider:</strong> Udemy</p>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4"><strong>Issued:</strong> May 2025</p>
-        <a href="https://www.udemy.com/certificate/UC-08bd8bbf-0480-4106-8b79-8ffabe5029ed/" target="_blank" class="mt-auto inline-flex items-center text-indigo-600 dark:text-indigo-400 font-semibold hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">
-          View Certificate
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
-        </a>
-      </div>
-
-      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl flex flex-col h-full">
-        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">Cisco DCAIE: AI on Cisco Infrastructure</h3>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mb-1 flex-grow"><strong>Provider:</strong> Cisco</p>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4"><strong>Issued:</strong> April 2025</p>
-        <span class="mt-auto text-sm text-gray-400 dark:text-gray-500 italic">Link not available</span>
-      </div>
-
-      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl flex flex-col h-full">
-        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">Flutter & Dart: The Complete Guide</h3>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mb-1"><strong>Provider:</strong> Udemy</p>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4"><strong>Issued:</strong> January 2025</p>
-        <a href="https://www.udemy.com/certificate/UC-31ddb86d-f115-492d-8a24-86dac9312e1d/" target="_blank" class="mt-auto inline-flex items-center text-indigo-600 dark:text-indigo-400 font-semibold hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">
-          View Certificate
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
-        </a>
-      </div>
-
-      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl flex flex-col h-full">
-        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">DevOps Certification</h3>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mb-1"><strong>Provider:</strong> Manara</p>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4"><strong>Issued:</strong> December 2024</p>
-        <span class="mt-auto text-sm text-gray-400 dark:text-gray-500 italic">Link not available</span>
-      </div>
-
-      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl flex flex-col h-full">
-        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">The Complete Flutter Development Bootcamp with Dart</h3>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mb-1"><strong>Provider:</strong> Udemy</p>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4"><strong>Issued:</strong> October 2024</p>
-        <a href="https://www.udemy.com/certificate/UC-56ab915b-b2ae-4b1d-ae15-ef5bf87344bf/" target="_blank" class="mt-auto inline-flex items-center text-indigo-600 dark:text-indigo-400 font-semibold hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">
-          View Certificate
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
-        </a>
       </div>
 
     </div>
@@ -794,63 +633,417 @@
 </section>
 
 
-  <section id="contact" class="py-16 bg-white dark:bg-gray-900">
-    <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
-      📈 GitHub Stats
-    </h2>
-    <div class="flex flex-wrap justify-center gap-8 px-6">
-      <img
-        src="https://github-readme-stats.vercel.app/api/top-langs/?username=mustafataha5&layout=compact&theme=radical"
-        alt="Top Languages" class="rounded-lg shadow-xl" />
-      <img src="https://github-readme-stats.vercel.app/api?username=mustafataha5&show_icons=true&theme=radical"
-        alt="GitHub Stats" class="rounded-lg shadow-xl" />
-    </div>
-  </section>
 
 
-  <footer>
-    <div class="py-16 bg-gray-100 dark:bg-gray-800 text-center">
-      <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-8">
-        🤝 Contact Me
-      </h2>
-      <div class="flex flex-wrap justify-center gap-6 px-6">
-        <a href="mailto:mustafa.taha.mu95@gmail.com"
-          class="inline-flex items-center px-8 py-4 bg-indigo-600 text-white text-lg font-medium rounded-full hover:bg-indigo-700 transition-colors duration-300 shadow-md">
-          <i class="fas fa-envelope mr-3"></i> Gmail
-        </a>
-        <a href="https://www.linkedin.com/in/mustafa-taha-3b87771b4/" target="_blank"
-          class="inline-flex items-center px-8 py-4 bg-blue-700 text-white text-lg font-medium rounded-full hover:bg-blue-800 transition-colors duration-300 shadow-md">
-          <i class="fab fa-linkedin mr-3"></i> LinkedIn
-        </a>
-        <a href="https://github.com/mustafataha5" target="_blank"
-          class="inline-flex items-center px-8 py-4 bg-gray-700 text-white text-lg font-medium rounded-full hover:bg-gray-800 transition-colors duration-300 shadow-md">
-          <i class="fab fa-github mr-3"></i> GitHub
-        </a>
-        <a href="https://leetcode.com/u/user2128Dt/" target="_blank"
-          class="inline-flex items-center px-8 py-4 bg-yellow-600 text-white text-lg font-medium rounded-full hover:bg-yellow-700 transition-colors duration-300 shadow-md">
-          <i class="fab fa-leanpub mr-3"></i> LeetCode
-        </a>
+    <section id="certifications" class="section bg-white dark:bg-slate-950">
+      <div class="section-header">
+        <p class="section-kicker">Credentials</p>
+        <h2>Certifications</h2>
+        <p>Recently updated with Udacity Data Analyst and Intro to Machine Learning with TensorFlow Nanodegree certificates.</p>
       </div>
-    </div>
-    <footer class="bg-indigo-700 text-white py-6 text-center">
-      <p>© 2025 Mustafa Taha - All rights reserved.</p>
-    </footer>
+
+      <div class="mx-auto grid max-w-7xl gap-6 px-5 md:grid-cols-2 lg:grid-cols-3">
+        <article class="cert-card featured-cert">
+          <h3>Intro to Machine Learning with TensorFlow Nanodegree</h3>
+          <p><strong>Provider:</strong> Udacity</p>
+          <p><strong>Issued:</strong> April 17, 2026</p>
+          <a href="https://www.udacity.com/certificate/e/6c7e8a00-0060-11f1-a92d-d7ccc9d4554a" target="_blank" rel="noopener noreferrer">View Certificate <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i></a>
+        </article>
+
+        <article class="cert-card featured-cert">
+          <h3>Data Analyst Nanodegree</h3>
+          <p><strong>Provider:</strong> Udacity</p>
+          <p><strong>Issued:</strong> November 2025</p>
+          <a href="https://www.udacity.com/certificate/e/637273e8-70a2-11f0-b0a9-0b21acc03ba7" target="_blank" rel="noopener noreferrer">View Certificate <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i></a>
+        </article>
+
+        <article class="cert-card featured-cert">
+          <h3>Google Data Analytics Professional Certificate</h3>
+          <p><strong>Provider:</strong> Coursera</p>
+          <p><strong>Issued:</strong> February 2026</p>
+          <a href="https://www.coursera.org/account/accomplishments/specialization/2Y3MBVV9ORQH" target="_blank" rel="noopener noreferrer">View Certificate <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i></a>
+        </article>
+
+        <article class="cert-card"><h3>Deep Reinforcement Learning Course</h3><p><strong>Provider:</strong> Hugging Face</p><p><strong>Issued:</strong> August 2025</p><a href="https://cdn-uploads.huggingface.co/production/uploads/noauth/5-nxPLPn9k8dYffl0flF7.webp" target="_blank" rel="noopener noreferrer">View Certificate <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i></a></article>
+        <article class="cert-card"><h3>AI/ML Course with Real Graduation Project</h3><p><strong>Provider:</strong> Hsoub Academy</p><p><strong>Issued:</strong> August 2025</p><a href="https://academy.hsoub.com/certificate/PPL5OG77EKFAR2GRNBE78V8A9.pdf" target="_blank" rel="noopener noreferrer">View Certificate <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i></a></article>
+        <article class="cert-card"><h3>Django Masterclass: Build 9 Projects</h3><p><strong>Provider:</strong> Udemy</p><p><strong>Issued:</strong> June 2025</p><a href="https://www.udemy.com/certificate/UC-4e5b939c-ba64-4345-8860-758870a08185/" target="_blank" rel="noopener noreferrer">View Certificate <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i></a></article>
+        <article class="cert-card"><h3>Cisco DCAIE: AI on Cisco Infrastructure</h3><p><strong>Provider:</strong> Cisco</p><p><strong>Issued:</strong> April 2025</p><span>Link not available</span></article>
+        <article class="cert-card"><h3>DevOps Certification</h3><p><strong>Provider:</strong> Manara</p><p><strong>Issued:</strong> December 2024</p><span>Link not available</span></article>
+      </div>
+    </section>
+
+    <section id="github" class="section bg-slate-50 dark:bg-slate-900">
+      <div class="section-header">
+        <p class="section-kicker">GitHub</p>
+        <h2>GitHub Activity</h2>
+        <p>Languages and repository activity from my public GitHub profile.</p>
+      </div>
+      <div class="mx-auto flex max-w-6xl flex-wrap justify-center gap-6 px-5">
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mustafataha5&layout=compact&theme=radical" alt="Mustafa Taha top GitHub languages" class="rounded-2xl shadow-xl" loading="lazy" />
+        <img src="https://github-readme-stats.vercel.app/api?username=mustafataha5&show_icons=true&theme=radical" alt="Mustafa Taha GitHub stats" class="rounded-2xl shadow-xl" loading="lazy" />
+      </div>
+    </section>
+
+
+    <section id="contact" class="section bg-white dark:bg-slate-950">
+      <div class="section-header">
+        <p class="section-kicker">Contact</p>
+        <h2>Let’s Connect</h2>
+        <p>Open to data analytics, AI engineering, full-stack development, and freelance opportunities.</p>
+      </div>
+      <div class="mx-auto flex max-w-4xl flex-wrap justify-center gap-4 px-5">
+        <a href="mailto:mustafa.taha.mu95@gmail.com" class="contact-btn bg-brand-600 hover:bg-brand-700"><i class="fa-solid fa-envelope"></i> Gmail</a>
+        <a href="https://www.linkedin.com/in/mustafa-taha-ai/" target="_blank" rel="noopener noreferrer" class="contact-btn bg-blue-700 hover:bg-blue-800"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/mustafataha5" target="_blank" rel="noopener noreferrer" class="contact-btn bg-slate-800 hover:bg-slate-900"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://leetcode.com/u/user2128Dt/" target="_blank" rel="noopener noreferrer" class="contact-btn bg-amber-600 hover:bg-amber-700"><i class="fa-solid fa-code"></i> LeetCode</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-slate-50 py-6 text-center text-sm text-slate-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400">
+    <p>© 2026 Mustafa Taha. Built with HTML, Tailwind CSS, and JavaScript.</p>
   </footer>
 
-  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden">
-    <div class="relative max-w-4xl max-h-full mx-auto p-4">
-      <button id="closeModal"
-        class="absolute top-4 right-4 text-white text-3xl font-bold p-2 leading-none focus:outline-none z-50">
-        &times;
-      </button>
-      <img id="modalImage" src="" alt="Full screen image"
-        class="max-w-full max-h-[90vh] object-contain cursor-zoom-out" />
-    </div>
+  <div id="imageModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 p-4">
+    <button id="closeModal" type="button" aria-label="Close image preview" class="absolute right-6 top-6 text-4xl font-bold text-white hover:text-slate-300">&times;</button>
+    <img id="modalImage" src="" alt="Full screen project screenshot" class="max-h-[90vh] max-w-full cursor-zoom-out rounded-lg object-contain" />
   </div>
 
+  <style>
+    .nav-link {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: rgb(51 65 85);
+      transition: color 0.2s ease;
+    }
+    .nav-link:hover { color: rgb(79 70 229); }
+    .dark .nav-link { color: rgb(203 213 225); }
+    .dark .nav-link:hover { color: rgb(129 140 248); }
 
+    .mobile-link {
+      display: block;
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+      font-weight: 600;
+      color: rgb(51 65 85);
+      transition: background-color 0.2s ease;
+    }
+    .mobile-link:hover { background-color: rgb(241 245 249); }
+    .dark .mobile-link { color: rgb(203 213 225); }
+    .dark .mobile-link:hover { background-color: rgb(30 41 59); }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 9999px;
+      background-color: rgb(79 70 229);
+      padding: 0.75rem 1.5rem;
+      font-weight: 700;
+      color: white;
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+      transition: all 0.2s ease;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background-color: rgb(67 56 202);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 9999px;
+      border: 1px solid rgb(203 213 225);
+      background-color: white;
+      padding: 0.75rem 1.5rem;
+      font-weight: 700;
+      color: rgb(30 41 59);
+      box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+      transition: all 0.2s ease;
+    }
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      background-color: rgb(248 250 252);
+    }
+    .dark .btn-secondary {
+      border-color: rgb(51 65 85);
+      background-color: rgb(15 23 42);
+      color: white;
+    }
+    .dark .btn-secondary:hover { background-color: rgb(30 41 59); }
+
+    .section { padding-top: 5rem; padding-bottom: 5rem; }
+    .section-header {
+      max-width: 48rem;
+      margin: 0 auto 3rem auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      text-align: center;
+    }
+    .section-header h2 {
+      font-size: clamp(2.25rem, 5vw, 3rem);
+      font-weight: 900;
+      letter-spacing: -0.025em;
+      color: rgb(2 6 23);
+    }
+    .dark .section-header h2 { color: white; }
+    .section-header p:not(.section-kicker) {
+      margin-top: 1rem;
+      font-size: 1.125rem;
+      line-height: 2rem;
+      color: rgb(71 85 105);
+    }
+    .dark .section-header p:not(.section-kicker) { color: rgb(203 213 225); }
+    .section-kicker {
+      margin-bottom: 0.75rem;
+      font-size: 0.875rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: rgb(79 70 229);
+    }
+    .dark .section-kicker { color: rgb(129 140 248); }
+
+    .stat-card {
+      border-radius: 1.5rem;
+      border: 1px solid rgb(226 232 240);
+      background-color: white;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+    }
+    .dark .stat-card {
+      border-color: rgb(30 41 59);
+      background-color: rgb(15 23 42);
+    }
+    .stat-card span {
+      display: block;
+      font-size: 1.875rem;
+      font-weight: 900;
+      color: rgb(79 70 229);
+    }
+    .dark .stat-card span { color: rgb(129 140 248); }
+    .stat-card p {
+      margin-top: 0.5rem;
+      font-weight: 600;
+      color: rgb(71 85 105);
+    }
+    .dark .stat-card p { color: rgb(203 213 225); }
+
+    .project-card {
+      overflow: hidden;
+      border-radius: 1.5rem;
+      border: 1px solid rgb(226 232 240);
+      background-color: white;
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+      transition: all 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    }
+    .dark .project-card {
+      border-color: rgb(30 41 59);
+      background-color: rgb(2 6 23);
+    }
+    .project-card img {
+      height: 14rem;
+      width: 100%;
+      object-fit: cover;
+    }
+    .project-body {
+      display: flex;
+      min-height: 260px;
+      flex-direction: column;
+      padding: 1.5rem;
+    }
+    .project-body h3 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 900;
+      color: rgb(15 23 42);
+    }
+    .dark .project-body h3 { color: white; }
+    .project-body p {
+      margin-top: 0.75rem;
+      flex-grow: 1;
+      line-height: 1.75rem;
+      color: rgb(71 85 105);
+    }
+    .dark .project-body p { color: rgb(203 213 225); }
+    .icon-link {
+      font-size: 1.5rem;
+      color: rgb(100 116 139);
+      transition: color 0.2s ease;
+    }
+    .icon-link:hover { color: rgb(79 70 229); }
+    .dark .icon-link { color: rgb(148 163 184); }
+    .dark .icon-link:hover { color: rgb(129 140 248); }
+
+    .tags {
+      margin-top: 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .tags span {
+      border-radius: 9999px;
+      background-color: rgb(238 242 255);
+      padding: 0.25rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: rgb(67 56 202);
+    }
+    .dark .tags span {
+      background-color: rgb(99 102 241 / 0.1);
+      color: rgb(165 180 252);
+    }
+
+    .slide {
+      width: 100%;
+      flex-shrink: 0;
+    }
+    .slide img {
+      height: 28rem;
+      width: 100%;
+      cursor: zoom-in;
+      background-color: rgb(226 232 240);
+      object-fit: contain;
+    }
+    .dark .slide img { background-color: rgb(30 41 59); }
+    .slide p {
+      background-color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: rgb(51 65 85);
+    }
+    .dark .slide p {
+      background-color: rgb(2 6 23);
+      color: rgb(203 213 225);
+    }
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      z-index: 10;
+      transform: translateY(-50%);
+      border-radius: 9999px;
+      background-color: rgb(2 6 23 / 0.7);
+      padding: 0.75rem 1rem;
+      color: white;
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+      transition: background-color 0.2s ease;
+    }
+    .slider-btn:hover { background-color: rgb(2 6 23); }
+
+    .skill-card {
+      border-radius: 1.5rem;
+      border: 1px solid rgb(226 232 240);
+      background-color: white;
+      padding: 1.75rem;
+      box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+      transition: all 0.2s ease;
+    }
+    .skill-card:hover {
+      transform: translateY(-0.25rem);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    }
+    .dark .skill-card {
+      border-color: rgb(30 41 59);
+      background-color: rgb(2 6 23);
+    }
+    .skill-card h3 {
+      margin-bottom: 0.75rem;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: rgb(2 6 23);
+    }
+    .dark .skill-card h3 { color: white; }
+    .skill-card p {
+      line-height: 1.75rem;
+      color: rgb(71 85 105);
+    }
+    .dark .skill-card p { color: rgb(203 213 225); }
+
+    .cert-card {
+      display: flex;
+      min-height: 240px;
+      flex-direction: column;
+      border-radius: 1.5rem;
+      border: 1px solid rgb(226 232 240);
+      background-color: white;
+      padding: 1.75rem;
+      box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+      transition: all 0.2s ease;
+    }
+    .cert-card:hover {
+      transform: translateY(-0.25rem);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    }
+    .dark .cert-card {
+      border-color: rgb(30 41 59);
+      background-color: rgb(15 23 42);
+    }
+    .featured-cert {
+      border-color: rgb(199 210 254);
+      background-color: rgb(238 242 255 / 0.6);
+    }
+    .dark .featured-cert {
+      border-color: rgb(67 56 202 / 0.6);
+      background-color: rgb(99 102 241 / 0.1);
+    }
+    .cert-card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: rgb(2 6 23);
+    }
+    .dark .cert-card h3 { color: white; }
+    .cert-card p {
+      margin-bottom: 0.5rem;
+      color: rgb(71 85 105);
+    }
+    .dark .cert-card p { color: rgb(203 213 225); }
+    .cert-card a {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      font-weight: 700;
+      color: rgb(79 70 229);
+    }
+    .cert-card a:hover { color: rgb(67 56 202); }
+    .dark .cert-card a { color: rgb(129 140 248); }
+    .dark .cert-card a:hover { color: rgb(165 180 252); }
+    .cert-card span {
+      margin-top: auto;
+      font-size: 0.875rem;
+      font-style: italic;
+      color: rgb(148 163 184);
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      border-radius: 9999px;
+      padding: 1rem 1.75rem;
+      font-weight: 700;
+      color: white;
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+      transition: all 0.2s ease;
+    }
+    .contact-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    }
+
+    @media (max-width: 640px) {
+      .slide img { height: 18rem; }
+      .project-body { min-height: auto; }
+    }
+  </style>
 
   <script src="script.js"></script>
 </body>
-
 </html>
